@@ -1,0 +1,26 @@
+<div class="divverifyemail">
+    {{#if user.IsEmailVerified}}
+    <div class="text-info">
+        <strong>Welcome {{user.username}}</strong>, Your registered email is verified with us. 
+        <input type="hidden" id="hndemailverified" name="hndemailverified" value={{user.IsEmailVerified}} />
+    </div>
+    {{else}}
+    <div class="text-danger hidden vemailerrorResult">
+        Currently there are some technical issue.Please try again later.
+    </div>
+    <div class="text-success hidden vemailsuccessResult">
+        One mail is sent to your registered email i.e. <strong>{{user.email}}</strong> with a verification link. 
+        Please click that link to verify your email within 24Hours.
+    </div>
+    <div class="emailverificationform ">
+        <form id="frmemailverification">
+            <div class="text-warning">
+                <strong>Welcome {{user.username}}</strong>,Please click here to verify your registered email. <input type="submit" value="Verify Email" class="btn btn-warning btn-sm">
+            <input type="hidden" id="hndemailid" name="hndemailid" value={{user.email}} />
+            <input type="hidden" id="hnduserid" name="hnduserid" value={{user._id}} />
+            </div>
+        </form>
+    </div>
+    {{/if}}
+</div>
+<br/>

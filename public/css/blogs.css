@@ -1,0 +1,89 @@
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/* span.glyphicon.glyphicon-edit {
+    float: right;
+}
+
+span.glyphicon.glyphicon-remove {
+    float: right;
+} */
+
+.editblog {
+    float: right;
+}
+
+span#loadmoreblogbyuserid {
+    margin-top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div#divImage {
+    text-align: left;
+}
+
+span.glyphicon.glyphicon-plus-sign {
+    float: right;
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+span.glyphicon.glyphicon-remove-sign {
+    float: right;
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.commentpanel .panel-footer.text-right {
+    background-color: #ecf0f1 !important;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+span#loadmorecommentbyblogid {
+    margin-bottom: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.comment-panel-default {
+    border-color: cadetblue;
+    background-color: aliceblue;
+}
+
+.commentstats {
+    float: right;
+    padding-bottom: 10px;
+}
+
+.commentFooter {
+    background-color: black !important;
+    color: white;
+    padding: 5px 8px;
+}
+
+div#myModal {
+    /* display: block; */
+    /* display: inline-block !important; */
+    height: 100%;
+    overflow: scroll;
+}
+
+.note-group-select-from-files {
+    display: none;
+}
+
+button.note-btn.btn.btn-default.btn-sm {
+    BACKGROUND-COLOR: BLACK;
+}

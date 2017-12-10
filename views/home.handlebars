@@ -1,0 +1,43 @@
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="bs-component blogdata">
+
+                {{#each blogs.result}}
+                <div>
+                    <!-- Title ,Author ,Date/Time-->
+                    <h3 class="h3-responsive"><a href="/viewblog/showdetails/{{this._id}}">
+                    <img border="0" src="/images/article.png" title="article"></a>{{{this.topic}}}</h3>
+                    <p>Written by {{#Compare ../user._id "==" this.userid}}
+                        <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} {{/Compare}},
+                        <span class="glyphicon glyphicon-time"></span> Posted on {{#CovertISODate this.creationdate}}{{/CovertISODate}}</p>
+
+                    <!--Content-->
+                    <span class="limitblogdata">{{{this.content}}}</span>
+
+                    <!--"Read more" button-->
+                    <a href="/viewblog/showdetails/{{this._id}}"><button class="btn btn-info btn-sm">Read more</button></a>
+                </div>
+                <hr> {{/each}}
+
+            </div>
+
+            {{!-- <input type="hidden" name="nextsearindex" id="nextsearindex" value="{{index}}" /> --}}
+
+            <div id="divImage" data-lastblogid="{{lastblogid}}">
+                <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <!-- Blog Categories Well -->
+                {{#if category}} {{> blogcategory category=category }} {{/if}}
+
+                <!-- Subcribe Well -->
+                {{> subscribe}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/home.js"></script>

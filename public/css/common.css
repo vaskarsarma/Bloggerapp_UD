@@ -1,0 +1,213 @@
+nav.navbar.navbar-default {
+    background-color: black !important;
+}
+
+.panel-footer {
+    background-color: black !important;
+}
+
+.panel-footer h1 {
+    color: #fff !important;
+}
+
+.cancel a {
+    color: #fff !important;
+}
+
+.signup a {
+    color: #fff !important;
+}
+
+.alert-signup {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-signup .close {
+    color: #fff !important;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Start - Circualr Profile Image on Navigation */
+
+.navbarimage {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four {
+    background-image: url('/images/18x18.png');
+}
+
+.navbar-nav>li>a.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ui-datepicker {
+    z-index: 1000!important;
+}
+
+
+/* End - Circualr Profile Image on Navigation */
+
+.typeahead {
+    color: red;
+    font-weight: bold;
+}
+
+.tt-menu {
+    width: 250px;
+    margin: 12px 0;
+    padding: 9px 9px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.defaultfontweight {
+    font-weight: normal;
+    color: black;
+}
+
+.form-control,
+input {
+    border-width: 1px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.close {
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    border: 0;
+    -webkit-appearance: none;
+    font-family: 'Glyphicons Halflings' !important;
+    font-size: 16.5px !important;
+}
+
+.close:hover,
+.close:focus {
+    color: black !important;
+}
+
+.glyphicons {
+    padding: 6px !important;
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    border: 0;
+    font-family: 'Glyphicons Halflings' !important;
+    -webkit-appearance: none;
+}
+
+span#loadmoreblog {
+    margin-bottom: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div#divImage {
+    text-align: left;
+}
+
+.col-lg-4.divUserBlogs {
+    min-height: 100px;
+}
+
+.customDiv {
+    margin-bottom: 14px;
+}
+
+.list-inline>li {
+    margin: 24px 100px 0px 50px;
+}
+
+/* body {
+    padding-top: 70px;
+} */
+
+.form-group.serach {
+    padding: 21px 0px 0px 0px !important;
+}
+
+#inputSearch-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#inputSearch-icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+
+#inputSearch-description {
+    margin: 0;
+    padding: 0;
+}
+
+.resize {
+    width: 30px;
+    height: auto;
+}
+
+label.col-lg-2.control-label {
+    margin-top: -11px;
+}
+
+.bootstrap-growl.alert.alert-danger {
+    top: 12% !important;
+    left: 48.3% !important;
+}
+
+.bootstrap-growl.alert.alert-success {
+    top: 53% !important;
+    left: 41% !important;
+    max-width: 80% !important;
+}

@@ -1,0 +1,93 @@
+<div class="panel panel-info profile-content-panel-border-radius bg-form personaldetailstatus">
+    <div class="panel-edit-checker text-right editpersonalinfo">
+        <h4><span class="glyphicon glyphicon-edit"></span></h4>
+        <input type="checkbox" class="form-control" id="checkerpersonalinfo" value="true" />
+    </div>
+    <div class="panel-body">
+        <div class="pderrorPanel hidden">
+        </div>
+        <div class="pdsuccessResult alert alert-dismissible alert-success hidden">
+            {{!-- <button type="button" class="close" data-dismiss="alert">&times;</button> --}}
+            <strong>Thank you!</strong> You have successfully updated about personal details.
+        </div>
+        <div class="alert alert-danger hidden pderrorResult" role="alert">
+            Currently there are some technical issue . Please try again later.
+        </div>
+        <form class="form-horizontal" id="frmpersonaldetails">
+            <fieldset>
+                <div class="form-group hidden savepersonalinfo">
+                    <div class="col-lg-3"></div>
+                    <div class="text-right col-lg-8">
+                        <button type="reset" class="btn btn-default btn-sm hidefrmpersonaldetails">Cancel</button>
+                        <button type="submit" class="btn btn-info btn-sm">Save</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-lg-3 control-label">First Name</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="50" id="inputfirstname" name="inputfirstname" placeholder="First Name"
+                            value="{{personaldetails.firstname}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputlastname" class="col-lg-3 control-label">Last Name</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="50" id="inputlastname" name="inputlastname" placeholder="Last Name"
+                            value="{{personaldetails.lastname}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputDOB" class="col-lg-3 control-label">DOB</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="12" id="inputDOB" name="inputDOB" placeholder="DOB" value="{{personaldetails.dob}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputaddress1" class="col-lg-3 control-label">Address1</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="100" placeholder="Address1" id="inputaddress1" name="inputaddress1"
+                            value="{{personaldetails.address1}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputaddress2" class="col-lg-3 control-label">Address2</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="100" placeholder="Address1" id="inputaddress2" name="inputaddress2"
+                            value="{{personaldetails.address2}}">
+                    </div>
+                </div>
+
+                <div class="form-group" id="bloodhound">
+                    <label for="inputcountry" class="col-lg-3 control-label">Country</label>
+                    <div class="col-lg-8">
+                        <input class="form-control typeahead defaultfontweight clearmsg" placeholder="Select Country" type="text" id="inputcountry"
+                            name="inputcountry" value="{{personaldetails.country}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputpinno" class="col-lg-3 control-label">Pin Number</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="15" placeholder="pinno" id="inputpinno" name="inputpinno" value="{{personaldetails.pinno}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputphone" class="col-lg-3 control-label">Contact Number</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control clearmsg" maxlength="15" id="inputphone" name="inputphone" placeholder="Phone" value="{{personaldetails.phone}}">
+                    </div>
+                </div>
+
+                {{#if personaldetails}}
+                <input type="hidden" id='userid' name='userid' value="{{personaldetails.userid}}">
+                <input type="hidden" id='_id' name='_id' value="{{personaldetails._id}}"> {{else}}
+                <input type="hidden" id='userid' name='userid' value="{{user._id}}">
+                <input type="hidden" id='_id' name='_id' value=""> {{/if}}
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,403 @@
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .banner{
+    min-height: 200px !important;
+  }
+  .nav.navbar-nav{
+    font-size: 14px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 25px 15px 0 15px;
+  }
+  .navbar-collapse{
+    background-color: #1e2534;
+    padding: 0 0 15px 0;
+  }
+  .navbar-brand{
+    margin: 0 0 0 -15px;
+  }
+  .blogCategory-heading h1{
+    font-size: 35px;
+  }
+  .blogCategory-box h2{
+    font-size: 20px;
+  }
+  .banner-txt{
+    margin:25% 0 0 20%;
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .banner-txt span{
+    font-size: 15px;
+  }
+  .footer{
+    font-size: 14px;
+  }
+  .footer-link ul{
+    display: inline-block;
+  }
+  .footer-link li a{
+    padding: 0 12px;
+  }
+  .footer-text{
+    text-align: center;
+  }
+  .modal-title{
+    font-size: 22px;
+  }
+  .footer-logo.pull-right {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .blogCategory-box img{
+    width: 20%;
+  }
+  .blog-panel h2{
+    font-size: 23px;
+  }
+  .blog-panel h5{
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .banner{
+    min-height: 200px !important;
+  }
+  .nav.navbar-nav{
+    font-size: 14px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 25px 15px 0 15px;
+  }
+  .navbar-collapse{
+    background-color: #1e2534;
+    padding: 0 0 15px 0;
+  }
+  .navbar-brand{
+    margin: 0 0 0 20px;
+  }
+  .blogCategory-heading h1{
+    font-size: 35px;
+  }
+  .blogCategory-box h2{
+    font-size: 20px;
+  }
+  .banner-txt{
+    margin:16% 0 0 20%;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .banner-txt span{
+    font-size: 18px;
+  }
+  .footer{
+    font-size: 14px;
+  }
+  .footer-link ul{
+    display: inline-block;
+  }
+  .footer-link li a{
+    padding: 0 18px;
+  }
+  .footer-text{
+    text-align: center;
+  }
+  .modal-title{
+    font-size: 22px;
+  }
+  .footer-logo.pull-right {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .blogCategory-box img{
+    width: 20%;
+  }
+  .blog-panel h2{
+    font-size: 25px;
+  }
+  .blog-panel h5{
+    font-size: 12px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .banner{
+    min-height: 250px !important;
+  }
+  .nav.navbar-nav{
+    font-size: 14px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 35px 15px 0 15px;
+  }
+  .navbar-collapse{
+    background-color: transparent;
+  }
+  .navbar-brand{
+    margin: 0 0 0 -10px;
+  }
+  .blogCategory-heading h1{
+    font-size: 50px;
+  }
+  .blogCategory-box h2{
+    font-size: 24px;
+  }
+  .banner-txt{
+    margin:16% 0 0 20%;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .banner-txt span{
+    font-size: 18px;
+  }
+  .footer{
+    font-size: 16px;
+  }
+  .footer-link ul{
+    display: inline-block;
+  }
+  .footer-link li a{
+    padding: 0 25px;
+  }
+  .footer-text{
+    text-align: center;
+  }
+  .modal-title{
+    font-size: 25px;
+  }
+  .footer-logo.pull-right {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .blogCategory-box img{
+    width: 10%;
+  }
+  .blog-panel h2{
+    font-size: 25px;
+  }
+  .blog-panel h5{
+    font-size: 14px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .banner{
+    min-height: 250px !important;
+  }
+  .nav.navbar-nav{
+    font-size: 18px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 35px 15px 0 15px;
+  }
+  .navbar-collapse{
+    background-color: transparent;
+  }
+  .navbar-brand{
+    margin: 0 0 0 20px;
+  }
+  .blogCategory-heading h1{
+    font-size: 50px;
+  }
+  .blogCategory-box h2{
+    font-size: 24px;
+  }
+  .banner-txt{
+    margin:12% 0 0 20%;
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .banner-txt span{
+    font-size: 20px;
+  }
+  .footer{
+    font-size: 16px;
+  }
+  .footer-link ul{
+    display: inline;
+  }
+  .footer-link li a{
+    padding: 0 25px;
+  }
+  .footer-text{
+    text-align: left;
+  }
+  .modal-title{
+    font-size: 25px;
+  }
+  .footer-logo.pull-right {
+    text-align: right;
+    padding-bottom: 0;
+  }
+  .blogCategory-box img{
+    width: 25%;
+  }
+  .blog-panel h2{
+    font-size: 30px;
+  }
+  .blog-panel h5{
+    font-size: 14px;
+  }
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .banner{
+    min-height:300px !important;
+  }
+  .navbar{
+    background-repeat: repeat-x; 
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 35px 15px 0 15px;
+  }
+  .nav.navbar-nav{
+    font-size: 18px;
+  }
+  .navbar-collapse{
+    background-color: transparent;
+  }
+  .navbar-brand{
+    margin: 0 0 0 20px;
+  }
+  .blogCategory-heading h1{
+    font-size: 50px;
+  }
+  .blogCategory-box h2{
+    font-size: 24px;
+  }
+  .banner-txt{
+    margin:10% 0 0 20%;
+    font-size: 60px;
+    line-height: 55px;
+  }
+  .banner-txt span{
+    font-size: 30px;
+  }
+  .footer{
+    font-size: 16px;
+  }
+  .footer-link ul{
+    display: inline;
+  }
+  .footer-link li a{
+    padding: 0 25px;
+  }
+  .footer-text{
+    text-align: left;
+  }
+  .modal-title{
+    font-size: 25px;
+  }
+  .footer-logo.pull-right {
+    text-align: right;
+    padding-bottom: 0;
+  }
+  .blogCategory-box img{
+    width: 25%;
+  }
+  .blog-panel h2{
+    font-size: 30px;
+  }
+  .blog-panel h5{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width : 2500px) {
+  .banner-txt{
+    margin:5% 0 0 20%;
+    font-size: 60px;
+  }
+  .banner-txt span{
+    font-size: 30px;
+  }
+  .footer-logo.pull-right {
+    text-align: right;
+    padding-bottom: 0px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 35px 15px 0 15px;
+  }
+  .blogCategory-box img{
+    width: 25%;
+  }
+  .blog-panel h2{
+    font-size: 30px;
+  }
+  .blog-panel h5{
+    font-size: 14px;
+  }
+}
+
+/************************************ TABS RESPONSIVE ************************************/
+
+.panel{
+  background-color: #f3f2f0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 20px 0;
+}
+.panel.with-nav-tabs .panel-heading{
+    padding: 0 ;
+    border-bottom: 2px solid #b8afa8;
+}
+.panel.with-nav-tabs .nav-tabs{
+  border: 0;
+  background-color: none;
+}
+.panel.with-nav-tabs .nav-justified{
+  margin-bottom: -1px;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+  color: #636262;
+}
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+  color: #777;
+  background-color: #ddd;
+  border-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #b8afa8;
+  border-color: #b8afa8;
+  border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+  background-color: #f5f5f5;
+  border-color: #b8afa8;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #777;   
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #b8afa8;
+}
