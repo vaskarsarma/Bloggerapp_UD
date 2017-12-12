@@ -1,15 +1,16 @@
-{{#each blogs.result}}
-<div>
-    <!-- Title ,Author ,Date/Time-->
-    <h3 class="h3-responsive"><a href="/viewblog/showdetails/{{this._id}}">
-                    <img border="0" src="/images/article.png" title="article"></a>{{{this.topic}}}</h3>
-    <p>Written by <a href="#">{{this.createdby}}</a>,
-        <span class="glyphicon glyphicon-time"></span> Posted on {{#CovertISODate this.creationdate}}{{/CovertISODate}}</p>
-
-    <!--Content-->
-    <span class="limitblogdata">{{{this.content}}}</span>
-
-    <!--"Read more" button-->
-    <a href="/viewblog/showdetails/{{this._id}}"><button class="btn btn-info btn-sm">Read more</button></a>
+ {{#each blogs.result}}
+<div class="blog-box">
+    <div class="blog-box-left">
+        {{#CovertISODate this.creationdate}}{{/CovertISODate}}
+    </div>
+    <div class="blog-box-right">
+        <h2>{{{this.topic}}}</h2>
+        <h5>by {{#Compare ../user._id "==" this.userid}}
+            <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} {{/Compare}}</h5>
+        <p>
+            <span class="limitblogdata">{{{this.content}}}</span>
+            <a href="/viewblog/showdetails/{{this._id}}">Read more...</a>
+        </p>
+    </div>
 </div>
-<hr> {{/each}}
+{{/each}}

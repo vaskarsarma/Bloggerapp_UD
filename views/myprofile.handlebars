@@ -1,22 +1,23 @@
 <link href="/css/myprofile.css" rel="stylesheet">
-<div class="bs-docs-section">
-  <div class="container-fluid">
+{{!-- <div class="bs-docs-section">
+  <div class="container-fluid"> --}}
+  <div class="my-container">
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-lg-4">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <!-- my profile status section -->
         {{> myprofilestatus}}
         <!-- /.my profile status section -->
       </div>
-      <div class="col-md-4 col-sm-4 col-lg-6">
+      <div class="col-lg-8 col-md-8 col-sm-12">
         {{> verifyemail}}
       </div>
-      <div class="col-md-4 col-sm-4 col-lg-2 hidden mapGoogle" >
+      {{!-- <div class="col-md-4 col-sm-4 col-lg-2 hidden mapGoogle" > --}}
          {{!-- <a href="/auth/facebook" class="fa fa-facebook" title="link current to facebook account"></a>  --}}
-        <a href="/auth/google" class="fa fa-google" title="link current to gmail account"></a>
-      </div>
+        {{!-- <a href="/auth/google" class="fa fa-google" title="link current to gmail account"></a>
+      </div> --}}
     </div>
 
-<hr>
+    <hr>
 
     <div class="row">
       <!--First column-->
@@ -187,7 +188,8 @@
       </div>
       <!--/.Second column-->
     </div>
-  </div>
+  {{!-- </div>
+</div> --}}
 </div>
 
 <input type="hidden" name="userid" id="userid" value="{{user._id}}" />

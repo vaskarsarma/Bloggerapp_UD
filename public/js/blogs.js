@@ -310,11 +310,11 @@ $(function() {
 
         var blogcomment = $("#blogcomment").val();
         var blogid = $("#blogid").val();
-        var username = $("#username").val();
+        var username = $("#uname").val();
         var userid = $("#userid").val();
         var blogtopic = $("#blogtopic").val();
 
-        console.log(blogcomment + "," + blogid + " , " + username + " , " + userid + " , " + blogtopic);
+        //console.log(blogcomment + "," + blogid + " , " + username + " , " + userid + " , " + blogtopic);
 
         if (blogcomment == "" || blogcomment == undefined) {
             isValid = false;

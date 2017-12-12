@@ -1,32 +1,35 @@
 'use strict'
 $(function() {
 
-    var categorytype = "all";
+    var categorytype = "0";
     var lastblogid = "0";
+    var userid = "";
 
     var blogid = $('#divImage').data("lastblogid");
     if (blogid == "0") $('#divImage').addClass("hidden");
 
     $('#divImage').on("click", function() {
+        categorytype=$(this).data("cid");
         lastblogid = $(this).data("lastblogid");
+        userid = $(this).data("userid");
 
-        console.log(lastblogid + " , " + categorytype);
+        // console.log("divImage clicked");
 
-        GetBlogsInfo(lastblogid, categorytype);
+        GetBlogsInfo(lastblogid, categorytype, userid);
     });
 
     $('.blogcategory').on("click", ".blogctid", function() {
         categorytype = $(this).data("key");
         console.log(categorytype);
-        GetBlogsInfo("0", categorytype);
+        GetBlogsInfo("0", categorytype, userid);
     })
 
     limitBlogLength();
 
-    $(".subscribe").on("click", function() {
-        console.log("subscribe");
-        subscribeuser();
-    });
+    // $(".subscribe").on("click", function() {
+    //     console.log("subscribe");
+    //     subscribeuser();
+    // });
 
 });
 
@@ -42,12 +45,14 @@ let limitBlogLength = () => {
     });
 };
 
-let GetBlogsInfo = (lastblogid, categorytype) => {
+let GetBlogsInfo = (lastblogid, categorytype, userid) => {
     run_waitMe("blogdata");
     $.when(GetCompiledTemplate("blogsection"), GetBlogsByStartIndex(lastblogid, categorytype))
         .done(function(template, json) {
 
-            var data = { "lastblogid": json.lastblogid, "blogs": json.blogs };
+            //console.log("User ID : " + userid);
+
+            var data = { "lastblogid": json.lastblogid, "blogs": json.blogs, "userid": userid };
 
             var compiledTemplate = Handlebars.compile(template);
             var newhtml = compiledTemplate(data);
@@ -91,52 +96,52 @@ let GetBlogsByStartIndex = (lastblogid, categorytype) => {
     return d.promise();
 };
 
-let subscribeuser = () => {
-    var isValid = true;
-    var errorPanel = $("<div></div>");
-    var errorMessage = null;
+// let subscribeuser = () => {
+//     var isValid = true;
+//     var errorPanel = $("<div></div>");
+//     var errorMessage = null;
 
-    if ($("#nameSubscribe").val() == "" || $("#nameSubscribe").val() == undefined) {
-        isValid = false;
-        errorPanel.append(
-            ErrorMessage("<strong>Warning!</strong> Please enter name.")
-        );
-    } else if (!validateName($("#nameSubscribe").val())) {
-        isValid = false;
-        errorPanel.append(
-            ErrorMessage(" <strong>Warning!</strong> Please enter valid Name.")
-        );
-    }
+//     if ($("#nameSubscribe").val() == "" || $("#nameSubscribe").val() == undefined) {
+//         isValid = false;
+//         errorPanel.append(
+//             ErrorMessage("<strong>Warning!</strong> Please enter name.")
+//         );
+//     } else if (!validateName($("#nameSubscribe").val())) {
+//         isValid = false;
+//         errorPanel.append(
+//             ErrorMessage(" <strong>Warning!</strong> Please enter valid Name.")
+//         );
+//     }
 
-    if ($("#emailSubscribe").val() == "" || $("#emailSubscribe").val() == undefined) {
-        isValid = false;
-        errorPanel.append(
-            ErrorMessage("<strong>Warning!</strong> Please enter email.")
-        );
-    } else if (!validateEmail($("#emailSubscribe").val())) {
-        isValid = false;
-        errorPanel.append(
-            ErrorMessage("<strong>Warning!</strong> Please enter valid email.")
-        );
-    }
+//     if ($("#emailSubscribe").val() == "" || $("#emailSubscribe").val() == undefined) {
+//         isValid = false;
+//         errorPanel.append(
+//             ErrorMessage("<strong>Warning!</strong> Please enter email.")
+//         );
+//     } else if (!validateEmail($("#emailSubscribe").val())) {
+//         isValid = false;
+//         errorPanel.append(
+//             ErrorMessage("<strong>Warning!</strong> Please enter valid email.")
+//         );
+//     }
 
-    if (isValid) {
-        $(".ErrorPanel").html("");
-        $.ajax({
-            url: "/commonapi/subscribe/",
-            method: "get",
-            data: {
-                emailID: $('#emailSubscribe').val(),
-                name: $('#nameSubscribe').val()
-            }
-        }).done(function(data) {
-            $(".subscribeBlock").addClass("hidden");
-            $(".successResult").removeClass("hidden");
-        }).fail(function(err) {
-            $(".subscribeBlock").addClass("hidden");
-            $(".errorResult").removeClass("hidden");
-        });
-    } else {
-        $(".ErrorPanel").html(errorPanel).removeClass("hidden");
-    }
-}
+//     if (isValid) {
+//         $(".ErrorPanel").html("");
+//         $.ajax({
+//             url: "/commonapi/subscribe/",
+//             method: "get",
+//             data: {
+//                 emailID: $('#emailSubscribe').val(),
+//                 name: $('#nameSubscribe').val()
+//             }
+//         }).done(function(data) {
+//             $(".subscribeBlock").addClass("hidden");
+//             $(".successResult").removeClass("hidden");
+//         }).fail(function(err) {
+//             $(".subscribeBlock").addClass("hidden");
+//             $(".errorResult").removeClass("hidden");
+//         });
+//     } else {
+//         $(".ErrorPanel").html(errorPanel).removeClass("hidden");
+//     }
+// }

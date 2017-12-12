@@ -323,7 +323,8 @@ span.profileCompleted {
 }
 
 .progress-bar {
-    padding: 5px 0px 0px 0px !important;
+    /* padding: 5px 0px 0px 0px !important; */
+    background-color: #403c37;
 }
 
 hr {

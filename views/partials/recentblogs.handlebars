@@ -1,12 +1,9 @@
 <!-- Recent blogs Widget Well -->
 {{#Compare mostrecentblogs.count ">" 0}}
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Recent Blogs</h3>
-  </div>
-  <div class="list-group  panel-body">
+<div class="list-group">
+  <h4 class="list-group-item active">Recent Blogs</h4>
     {{#each mostrecentblogs.result}}
-        <a class="list-group-item" href="/viewblog/showdetails/{{this._id}}">{{this.topic}}</a> {{/each}}
-  </div>
+        <a class="list-group-item" href="/viewblog/showdetails/{{this._id}}">{{this.topic}}</a> 
+    {{/each}}
 </div>
 {{/Compare}}

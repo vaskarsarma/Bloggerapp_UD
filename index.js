@@ -25,7 +25,8 @@ var hbs = exphbs.create({
         Compare: require("./public/js/helper/compare"),
         ValidateBlogs: require("./public/js/helper/validateBlogs"),
         CovertISODate: require("./public/js/helper/convertisodate"),
-        CreateDropDown: require("./public/js/helper/createdropdown")
+        CreateDropDown: require("./public/js/helper/createdropdown"),
+        ShowDate: require("./public/js/helper/converttolocaldate")        
     },
     partialsDir: ['views/partials/']
 });
@@ -127,8 +128,22 @@ app.get('/', authNotRequired, function(req, res) {
     var blogs = {};
     var blog = require("./modellayer/blogs");
     var categoryList = blog.category;
+ 
+    res.render('home', {
+        layout: 'default',
+        title: 'Home Page',
+        category: categoryList
+    });
+});
 
-    blog.blogs("0", "all").then(function(response) {
+app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
+  
+    var blogs = {};
+    var blog = require("./modellayer/blogs");
+    var blogCategory = req.params.blogCategory;
+    var categoryList = blog.category;
+
+    blog.blogs("0", blogCategory).then(function(response) {
         blogs = response.data;
 
         log.logger.info("Home Page : retrieve blogs : blogs count " + blogs.count);
@@ -138,21 +153,21 @@ app.get('/', authNotRequired, function(req, res) {
             lastblogid = result._id
         });
 
-        res.render('home', {
+        res.render('listblog', {
             layout: 'default',
-            title: 'Home Page',
+            title: 'Blog List',
             blogs: blogs,
-            category: categoryList,
+            blogCID:blogCategory,
             lastblogid: lastblogid
         });
     }).catch(function(err) {
         log.logger.error("Home Page : failed to retrieve blogs : error " + err);
         blogs = { "result": [], "count": 0 };
-        res.render('home', {
+        res.render('listblog', {
             layout: 'default',
-            title: 'Home Page',
+            title: 'Blog List',
             blogs: blogs,
-            category: categoryList,
+            blogCID:blogCategory,
             lastblogid: "0"
         });
     });

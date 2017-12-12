@@ -1,6 +1,6 @@
-nav.navbar.navbar-default {
+/* nav.navbar.navbar-default {
     background-color: black !important;
-}
+} */
 
 .panel-footer {
     background-color: black !important;
@@ -210,4 +210,37 @@ label.col-lg-2.control-label {
     top: 53% !important;
     left: 41% !important;
     max-width: 80% !important;
+}
+
+a.dropdown-toggle {
+    margin: -6px 0px 0px 0px;
+}
+
+h4.list-group-item.active, 
+h4.list-group-item.active:focus, 
+h4.list-group-item.active:hover  {
+    background-color: #403c37;
+    border-color: #403c37;
+}
+
+a.list-group-item:focus, 
+a.list-group-item:hover {
+    color: #ff6000;
+}
+
+a.signinlink:focus,
+a.signinlink:hover {
+    color : #ff6000;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #403c37;
+	background: #403c37;
+	font-weight: normal;
+	color: #ffffff;
 }

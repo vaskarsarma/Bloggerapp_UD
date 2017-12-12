@@ -52,21 +52,22 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li class="active">
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
                   <a href="#">About Us</a>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="/contactus">Contact Us</a>
                 </li>
                 {{#if user}}    
                   <li><a href="/auth/dashboard">Dashboard</a></li>
                   <li><a href="/blogs/profile/{{user._id}}">Blogs</a></li>{{/if}}
                 {{#if user}}
+                <li>
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
-                    {{#Compare ./user.authType "!==" "local" }}
+                  {{#Compare ./user.authType "!==" "local" }}
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                       <img src="{{user.userImage}}" 
                         class="profile-image navbarimage four reloadimage"> {{user.username}} <span class="caret"></span>
@@ -85,30 +86,12 @@
                       <li><a class="dropdown-item" href="/auth/changepwd/{{user._id}}">Change Password</a></li>
                       <li class="divider"></li>
                       <li><a class="dropdown-item" href="/auth/logout">Log-out {{user.username}}</a></li>
-                    </ul>
-                    {{/Compare}}
+                    </ul>                    
+                  {{/Compare}}
                   </li>
                 </ul>
+                </li>
                 {{else}}
-                {{!-- <div class="navbar-form navbar-right">
-                  <form class="" action="/auth/login" method="POST">
-                    <div class="form-group">
-                      <input type="email" placeholder="Email" id="username" name="username" required="true" class="form-control input-sm">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" placeholder="Password" id="password" name="password" required="true" class="form-control input-sm">
-                    </div>
-                    <button type="submit" class="btn btn-success btn-sm loginBtn" data-toggle="modal">Sign-in</button>
-                    <button type="button" class="btn btn-info btn-sm signup">
-                      <a class="nav-link" href="/auth/userRegistration">Sign-up</a>
-                      </button>
-                    <button type="button" class="btn btn-info btn-sm fortgotpassword">
-                      <a class="nav-link" href="/auth/forgotPwd">Forgot Password</a>
-                    </button>
-                    <a href="/auth/google" class="fa fa-google"></a>
-                    <a href="/auth/facebook" class="fa fa-facebook"></a>
-                  </form>
-                </div>  --}}
                 <li class="s-active" id="modal-846899" href="#modal-container-846899" role="button" class="btn" data-toggle="modal">
                   <a href="#">Sign in</a>
                 </li>
@@ -151,7 +134,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="subscribe">
+        <div class="subscribeclass">
           <div class="col-md-12 my-column">
             <button  id="modal-376027" href="#modal-container-376027" role="button" data-toggle="modal" type="button" class="btn btn-default btn-subscribe">
               Subscribe
@@ -190,101 +173,28 @@
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">
+            <div class="modal-footer subscribe_button">
+              <button type="button" class="btn btn-primary subscribe">
                 Submit
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="my-container">
-          <div class="col-md-12 my-column">
-            <div class="blogCategory-heading">
-              <h1>
-                Blog Categories
-              </h1>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
+            <div class="alert alert-success hidden successResult" role="alert">
+              <strong>Well done!</strong> You have successfully subscribe for our newsletters.
             </div>
-            <div class="row">
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png"  />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png" />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png" />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
+            <div class="alert alert-info hidden alertResult" role="alert">
+              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
             </div>
-            <div class="row">
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png"  />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png" />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
-              <div class="col-md-4 blogCategory-box">
-                <img alt="Technical Blog" src="/images/blogCategoryIcon.png" />
-                <h2>
-                  TECHNICAL BLOG
-                </h2>
-                <p>
-                  Blogging can seem like a quick and easy way to draw attention to yourself as a technology professional. You post your opinions and you've got a worldwide audience.
-                
-                  <a href="#">Learn More »</a>
-                </p>
-              </div>
+            <div class="alert alert-warning hidden warningResult" role="alert">
+              <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+            <div class="alert alert-danger hidden errorResult" role="alert">
+              <strong>OMG!</strong> currently there some technical issue .
             </div>
           </div>
         </div>
       </div>
 
-        {{{body}}}
-      
+    {{{body}}}      
 
     {{> footer}}
     

@@ -8,6 +8,16 @@ $(function() {
     if ($("#hdnSuccessMsg").val())
         showSuccessFlashMsg($("#hdnSuccessMsg").val());
 
+    $(".subscribe").on("click", function() {
+        console.log("subscribe");
+        subscribeuser();
+    });
+
+    $('.blogcategory').on("click", ".blogctid", function() {
+        categorytype = $(this).data("key");
+        console.log(categorytype);
+        GetBlogsInfo("0", categorytype);
+    })
 
     Handlebars.registerHelper("Compare", function(lvalue, operator, rvalue, options) {
 
@@ -250,3 +260,55 @@ let clearAllControls = $div => {
             .removeClass("has-feedback");
     });
 };
+
+let subscribeuser = () => {
+    var isValid = true;
+    var errorPanel = $("<div></div>");
+    var errorMessage = null;
+
+    if ($("#nameSubscribe").val() == "" || $("#nameSubscribe").val() == undefined) {
+        isValid = false;
+        errorPanel.append(
+            ErrorMessage("<strong>Warning!</strong> Please enter name.")
+        );
+    } else if (!validateName($("#nameSubscribe").val())) {
+        isValid = false;
+        errorPanel.append(
+            ErrorMessage(" <strong>Warning!</strong> Please enter valid Name.")
+        );
+    }
+
+    if ($("#emailSubscribe").val() == "" || $("#emailSubscribe").val() == undefined) {
+        isValid = false;
+        errorPanel.append(
+            ErrorMessage("<strong>Warning!</strong> Please enter email.")
+        );
+    } else if (!validateEmail($("#emailSubscribe").val())) {
+        isValid = false;
+        errorPanel.append(
+            ErrorMessage("<strong>Warning!</strong> Please enter valid email.")
+        );
+    }
+
+    if (isValid) {
+        $(".ErrorPanel").html("");
+        $.ajax({
+            url: "/commonapi/subscribe/",
+            method: "get",
+            data: {
+                emailID: $('#emailSubscribe').val(),
+                name: $('#nameSubscribe').val()
+            }
+        }).done(function(data) {
+            $(".subscribeBlock").addClass("hidden");
+            $(".successResult").removeClass("hidden");
+            $(".subscribe_button").addClass("hidden");
+        }).fail(function(err) {
+            $(".subscribeBlock").addClass("hidden");
+            $(".errorResult").removeClass("hidden");
+            $(".subscribe_button").removeClass("hidden");
+        });
+    } else {
+        $(".ErrorPanel").html(errorPanel).removeClass("hidden");
+    }
+}
