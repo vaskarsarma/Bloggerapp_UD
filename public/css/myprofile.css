@@ -330,3 +330,22 @@ span.profileCompleted {
 hr {
     border-top: 1px solid transparent !important;
 }
+
+.rowTempered {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.panel {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 2;
+    box-shadow: none;
+    margin: 0 0 20px 0;
+}
+
+/* .alert-info {
+    color: #ffffff;
+    background-color: #403c37;
+    border-color: #403c37;
+} */

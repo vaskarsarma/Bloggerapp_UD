@@ -13,8 +13,6 @@ $(function() {
         lastblogid = $(this).data("lastblogid");
         userid = $(this).data("userid");
 
-        // console.log("divImage clicked");
-
         GetBlogsInfo(lastblogid, categorytype, userid);
     });
 

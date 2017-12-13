@@ -25,13 +25,8 @@
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="content">Content</label>
-                  {{!--
-                  <div> --}}
                     <div id="content" name="content">{{blogs.content}}</div>
-                    {{!--
-                    <textarea class="input" rows="10" cols="85" maxlength="5000" id="content" name="content" autofocus="autofocus">{{blogs.content}}</textarea> --}}
                   </div>
-                  {{!-- </div> --}}
                 <div class="form-group">
                   <label class="control-label" for="category">Blog Category</label>
                   <div>
@@ -138,8 +133,7 @@
                     <label class="control-label" for="content_{{this._id}}">Content</label>
                     {{!--
                     <div> --}} {{!--
-                      <textarea class="input" rows="10" cols="85" maxlength="5000" id="content_{{this._id}}" name="content_{{this._id}}"
-                        autofocus="autofocus">{{{this.content}}}</textarea> --}} {{!-- </div> --}}
+                      <textarea class="input" rows="10" cols="85" maxlength="5000" id="content_{{this._id}}" name="content_{{this._id}}" autofocus="autofocus">{{{this.content}}}</textarea> --}} {{!-- </div> --}}
                     <textarea class="hidden" maxlength="5000" id="txt_{{this._id}}" name="txt_{{this._id}}">{{this.content}}</textarea>
                     <div id="content_{{this._id}}" name="content_{{this._id}}" autofocus="autofocus"></div>
                   </div>

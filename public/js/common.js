@@ -13,11 +13,11 @@ $(function() {
         subscribeuser();
     });
 
-    $('.blogcategory').on("click", ".blogctid", function() {
-        categorytype = $(this).data("key");
-        console.log(categorytype);
-        GetBlogsInfo("0", categorytype);
-    })
+    // $('.blogcategory').on("click", ".blogctid", function() {
+    //     categorytype = $(this).data("key");
+    //     console.log(categorytype);
+    //     GetBlogsInfo("0", categorytype);
+    // });
 
     Handlebars.registerHelper("Compare", function(lvalue, operator, rvalue, options) {
 
@@ -63,6 +63,12 @@ $(function() {
     Handlebars.registerHelper("CovertISODate", function(isodate) {
         if (isodate != undefined) {
             return new Date(isodate).toUTCString();
+        }
+    });
+
+    Handlebars.registerHelper("ShowDate", function(isodate) {
+        if (isodate != undefined) {
+            return new Date(isodate).toDateString();
         }
     });
 

@@ -1,127 +1,140 @@
 <link href="/css/dashboard.css" rel="stylesheet">
-<div class="bs-docs-section dashboard">
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-            <h2>DASHBOARD</h2>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-            <div class="form-group serach">
-                {{!-- <label for="inputPassword" class="col-lg-2 control-label">Password</label> --}}
-                <div>
-                    <div class="input-group">
-                        <input type="text" class="form-control input-sm" id="inputSearch" placeholder="Search">
-                        <span class="input-group-btn">
-                            <button type="submit" id="UserSearchBtn" class="btn btn-info btn-sm ">
-                                 <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+{{!-- <div class="my-container"> --}}
+    <div class="bs-docs-section dashboard">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="form-group serach">
+                    {{!--
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label> --}}
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" id="inputSearch" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="submit" id="UserSearchBtn" class="btn btn-info btn-sm ">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    {{!-- dashboard header count --}}
-    <div class="row dashboard">
-        <div class="col-xs-6 col-md-6 col-lg-3">
-            <div class="bs-component">
-                <div class="alert alert-success list-group">
-                    <div class="list-group list-group-item">
-                        <span class="glyphicon glyphicon-home"></span> Total website user<span class="badge">{{result.totalUser}}</span>
+        {{!-- dashboard header count --}}
+        <div class="row dashboard">
+            <div class="col-xs-6 col-md-6 col-lg-3">
+                <div class="bs-component">
+                    <div class="alert alert-success list-group">
+                        <div class="list-group list-group-item">
+                            <span class="glyphicon glyphicon-home"></span> Total website user
+                            <span class="badge">{{result.totalUser}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 col-lg-3">
+                <div class="bs-component">
+                    <div class="alert alert-success list-group">
+                        <div class="list-group list-group-item">
+                            <span class="glyphicon glyphicon-user"></span> Total subscriber
+                            <span class="badge">{{result.totalSbUser}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 col-lg-3">
+                <div class="bs-component">
+                    <div class="alert alert-success">
+                        <div class="list-group list-group-item">
+                            <span class="glyphicon glyphicon-map-marker"></span> Total google visitors
+                            <span class="badge">{{result.totalGoogleUser}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 col-lg-3">
+                <div class="bs-component">
+                    <div class="alert alert-success">
+                        <div class="list-group list-group-item">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> Total FB visitors
+                            <span class="badge">{{result.totalFBUser}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-md-6 col-lg-3">
-            <div class="bs-component">
-                <div class="alert alert-success list-group">
-                    <div class="list-group list-group-item">
-                        <span class="glyphicon glyphicon-user"></span> Total subscriber<span class="badge">{{result.totalSbUser}}</span>
+        {{!-- dashboard user graph --}}
+        <div class="row">
+            <div class="col-lg-6 divRegUserGraph">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User registration graph
+                            <span class="close  regUserGraph">&#xe031;</span>
+                        </h3>
+                    </div>
+                    <div class="panel-body" id="graphContainer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 divUserLoginHistoryGraph">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User login history graph
+                            <span class="close  regUserLoginGraph">&#xe031;</span>
+                        </h3>
+                    </div>
+                    <div class="panel-body" id="loginGraphContainer">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-md-6 col-lg-3">
-            <div class="bs-component">
-                <div class="alert alert-success">
-                    <div class="list-group list-group-item">
-                        <span class="glyphicon glyphicon-map-marker"></span> Total google visitors<span class="badge">{{result.totalGoogleUser}}</span>
-                    </div>
+
+        {{!-- dashboard user blocks --}}
+        <div class="row">
+            {{!-- blogs info --}}
+            <div class="col-lg-4 divUserBlogs">
+                <div class="list-group">
+                    <ul class="list-group panel-info">
+                        <li class="list-group-item panel-heading">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{!-- category info --}}
+            <div class="col-lg-4 divUserComments">
+                <div class="list-group">
+                    <ul class="list-group panel-info">
+                        <li class="list-group-item panel-heading">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{!-- userinfo info --}}
+            <div class="col-lg-4 divUserInfo" id="divUserInfo">
+                <div class="list-group">
+                    <ul class="list-group panel-info">
+                        <li class="list-group-item panel-heading">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-md-6 col-lg-3">
-            <div class="bs-component">
-                <div class="alert alert-success">
-                    <div class="list-group list-group-item">
-                        <span class="glyphicon glyphicon-thumbs-up"></span> Total FB visitors<span class="badge">{{result.totalFBUser}}</span>
-                    </div>
-                </div>
+
+        {{!-- dashboard user table --}}
+        <div class="row divUserTable">
+            <div class="col-lg-12 table-responsive divUserInnerTable" style="display: none">
             </div>
         </div>
+        <div class="clear"></div>
     </div>
-    {{!-- dashboard user graph --}}
-    <div class="row">
-        <div class="col-lg-6 divRegUserGraph">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">User registration graph <span class="close  regUserGraph">&#xe031;</span></h3>
-                </div>
-                <div class="panel-body" id="graphContainer">
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 divUserLoginHistoryGraph">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">User login history graph <span class="close  regUserLoginGraph">&#xe031;</span></h3>
-                </div>
-                <div class="panel-body" id="loginGraphContainer">
-                </div>
-            </div>
-        </div>
-    </div>
+{{!-- </div> --}}
 
-    {{!-- dashboard user blocks --}}
-    <div class="row">
-        {{!-- blogs info --}}
-        <div class="col-lg-4 divUserBlogs">
-            <div class="list-group">
-                <ul class="list-group panel-info">
-                    <li class="list-group-item panel-heading">
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        {{!-- category info --}}
-        <div class="col-lg-4 divUserComments">
-            <div class="list-group">
-                <ul class="list-group panel-info">
-                    <li class="list-group-item panel-heading">
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        {{!-- userinfo info --}}
-        <div class="col-lg-4 divUserInfo" id="divUserInfo">
-            <div class="list-group">
-                <ul class="list-group panel-info">
-                    <li class="list-group-item panel-heading">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    {{!-- dashboard user table --}}
-    <div class="row divUserTable">
-        <div class="col-lg-12 table-responsive divUserInnerTable" style="display: none">
-        </div>
-    </div>
-    <div class="clear"></div>
-</div><input type="hidden" id="userSelectedID" value="{{result.userID}}">
+<input type="hidden" id="userSelectedID" value="{{result.userID}}">
 <link href="/css/plugin/jquery.dataTables.min.css" rel="stylesheet" />
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="/js/plugin/jquery.dataTables.min.js"></script>

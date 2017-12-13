@@ -5,7 +5,7 @@
             <div class="blog-panel">
                 <h2>Blog heading : {{{blog.topic}}}</h2>
                 <h5>By {{#Compare user._id "==" blog.userid}}
-                    <a href="/myprofile/{{blog.userid}}">{{blog.createdby}}</a> {{blog.creationdate}}
+                    <a href="/myprofile/{{blog.userid}}">{{blog.createdby}}</a>
                     {{else}} {{blog.createdby}} {{/Compare}} | Posted on {{#CovertISODate blog.creationdate}}{{/CovertISODate}}
                 </h5>
                 <span>{{{blog.content}}}</span>
