@@ -158,7 +158,8 @@ app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
             title: 'Blog List',
             blogs: blogs,
             blogCID:blogCategory,
-            lastblogid: lastblogid
+            lastblogid: lastblogid,
+            categorylist: categoryList
         });
     }).catch(function(err) {
         log.logger.error("Home Page : failed to retrieve blogs : error " + err);
@@ -168,7 +169,8 @@ app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
             title: 'Blog List',
             blogs: blogs,
             blogCID:blogCategory,
-            lastblogid: "0"
+            lastblogid: "0",
+            categorylist: categoryList
         });
     });
 });

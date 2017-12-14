@@ -33,12 +33,12 @@ $(function() {
 
 let limitBlogLength = () => {
     $('.blogdata .limitblogdata').each(function(index, value) {
-        var showlength = 100;
+        var showlength = 200;
         var data = $(value).text();
         if (data.length > showlength) {
             var c = data.substring(0, showlength);
             $('.blogdata .limitblogdata')[index].innerHTML = "";
-            $('.blogdata .limitblogdata')[index].innerHTML = "<p>" + c + "...</p>";
+            $('.blogdata .limitblogdata')[index].innerHTML = "<p>" + c + "</p>";
         }
     });
 };

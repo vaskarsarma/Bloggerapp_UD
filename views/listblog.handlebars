@@ -1,6 +1,6 @@
 <div class="row">
     <div class="my-container">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-column blogdata">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 my-column blogdata">
             {{#each blogs.result}}
             <div class="blog-box">
                 <div class="blog-box-left">
@@ -9,10 +9,9 @@
                 <div class="blog-box-right">
                     <h2>{{{this.topic}}}</h2>
                     <h5>by {{#Compare ../user._id "==" this.userid}}
-                        <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} 
-                        {{/Compare}}
+                        <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} {{/Compare}}
                     </h5>
-                    
+
                     <span class="limitblogdata">{{{this.content}}}</span>
                     <a href="/viewblog/showdetails/{{this._id}}">Read more...</a>
                 </div>
@@ -21,6 +20,15 @@
             <div id="divImage" data-cid="{{blogCID}}" data-lastblogid="{{lastblogid}}">
                 <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span>
             </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 my-column">
+            {{#each categorylist}}
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
+                    <img alt="{{this.name}}" src="{{this.icon}}" />
+                </a>
+            </div>
+            {{/each}}
         </div>
     </div>
 </div>

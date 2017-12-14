@@ -170,7 +170,7 @@ $(function() {
             isValid = false;
             console.log("No file selected");
             errorPanel.append(
-                ErrorMessage("<strong>Warning!</strong> Please select an image file.")
+                ErrorMessage("<strong>Warning!</strong> Please select an image file of max size 1MB.")
             );
         } else {
             if (extension == "") {
@@ -181,6 +181,15 @@ $(function() {
                     )
                 );
             }
+        }
+
+        var fileSize = document.getElementById('displayImage').files[0].size;
+        if (fileSize >= 1048576) {
+            isValid = false;
+            console.log("File size is 1MB+");
+            errorPanel.append(
+                ErrorMessage("<strong>Warning!</strong> Please select an image file of max size 1MB.")
+            );
         }
 
         var data = new FormData(this); // <-- 'this' is your form element
@@ -203,6 +212,16 @@ $(function() {
                         errorPanel.append(
                             ErrorMessage(
                                 "<strong>Warning!</strong> Please select .jpg/.jpeg/.png/.gif file only."
+                            )
+                        );
+                        $(".ErrorPanel").html(errorPanel).removeClass("hidden");
+                        stop_waitMe("uploadphotostatus");
+                    } else if (data.error == "IFS") {
+                        console.log("Exceed file size limit");
+                        $("#displayImage").val("");
+                        errorPanel.append(
+                            ErrorMessage(
+                                "<strong>Warning!</strong> Please select an image file of max size 1MB only."
                             )
                         );
                         $(".ErrorPanel").html(errorPanel).removeClass("hidden");

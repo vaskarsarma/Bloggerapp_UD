@@ -207,8 +207,15 @@ router.post('/uploadphoto', function(req, res) {
             var oldpath = files.displayImage.path;
             var extn = getFileExtension(files.displayImage.name);
 
-            log.logger.info("uploadphoto : user_id " + user_id + " : oldpath " + oldpath + " : name : " +
-                files.displayImage.name + " : extn : " + extn);
+            log.logger.info("uploadphoto : user_id " + user_id + " , oldpath " + oldpath + " , name : " +
+                files.displayImage.name + " , extn : " + extn + " , Size : " + files.displayImage.size);
+
+            const fileSize = Number(config.get("profilephoto.filesize"));
+            if(files.displayImage.size >= fileSize){
+                log.logger.info("uploadphoto : File size error");
+                res.json({ "error": "IFS" });
+                return;
+            }
 
             switch (extn) {
                 case 'jpg':

@@ -1,195 +1,213 @@
-<link href="/css/myprofile.css" rel="stylesheet">
-{{!-- <div class="bs-docs-section">
+<link href="/css/myprofile.css" rel="stylesheet"> {{!--
+<div class="bs-docs-section">
   <div class="container-fluid"> --}}
-  <div class="my-container">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <!-- my profile status section -->
-        {{> myprofilestatus}}
-        <!-- /.my profile status section -->
+    <div class="my-container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <!-- my profile status section -->
+          {{> myprofilestatus}}
+          <!-- /.my profile status section -->
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          {{> verifyemail}}
+        </div>
+        
+        {{!-- <div class="col-lg-1 col-md-1 col-sm-12 col-xs-1 hidden mapGoogle">  --}}
+          {{!-- <a href="/auth/facebook" class="fa fa-facebook" title="link current to facebook account"></a>  --}}
+          {{!-- <a href="/auth/google" class="fa fa-google" title="link current to gmail account"></a>
+        </div>  --}}
       </div>
-      <div class="col-lg-8 col-md-8 col-sm-12">
-        {{> verifyemail}}
-      </div>
-      {{!-- <div class="col-md-4 col-sm-4 col-lg-2 hidden mapGoogle" > --}}
-         {{!-- <a href="/auth/facebook" class="fa fa-facebook" title="link current to facebook account"></a>  --}}
-        {{!-- <a href="/auth/google" class="fa fa-google" title="link current to gmail account"></a>
-      </div> --}}
-    </div>
 
-    <hr>
+      <hr>
 
-    <div class="row">
-      <!--First column-->
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <!-- my profile status section -->
-        {{!-- {{> myprofilestatus}} --}}
-        <!-- /.my profile status section -->
+      <div class="row">
+        <!--First column-->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <!-- my profile status section -->
+          {{!-- {{> myprofilestatus}} --}}
+          <!-- /.my profile status section -->
 
-        {{> uploadprofilephoto}}
-        {{!-- <hr> --}}
-      </div>
-      <!--/.First column-->
+          {{> uploadprofilephoto}} {{!--
+          <hr> --}}
+        </div>
+        <!--/.First column-->
 
-      <!--Second column-->
-      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <!--Second column-->
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
-        <div class="row">
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#aboutmetab" data-toggle="tab" aria-expanded="false">About Me</a></li>
-            <li class=""><a href="#personaltab" data-toggle="tab" aria-expanded="true">Personal Info</a></li>
-            <li class=""><a href="#proffessionaltab" data-toggle="tab" aria-expanded="true">Proffessional Info</a></li>
-            {{!--
-            <li class="disabled"><a>Disabled</a></li> --}}
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                Activity <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#blogtab" data-toggle="tab" class="blogactivitytab">Blogs</a></li>
-                <li class="divider"></li>
-                <li><a href="#commenttab" data-toggle="tab" class="commentactivitytab">Comments</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade active in" id="aboutmetab">
-              <p>
-                <!-- About me section -->
-                {{> aboutme aboutme=aboutme}}
-                <!-- /. About me section -->
-              </p>
-            </div>
-            <div class="tab-pane fade" id="personaltab">
-              <p>
-                {{> personaldetails personaldetails=personaldetails}}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="proffessionaltab">
-              <p>
-                {{> proffessionaldetails proffessionaldetails=proffessionaldetails}}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="blogtab">
-              <p>
-                <div class="bs-docs-section">
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
+          <div class="row">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#aboutmetab" data-toggle="tab" aria-expanded="false">About Me</a>
+              </li>
+              <li class="">
+                <a href="#personaltab" data-toggle="tab" aria-expanded="true">Personal Info</a>
+              </li>
+              <li class="">
+                <a href="#proffessionaltab" data-toggle="tab" aria-expanded="true">Proffessional Info</a>
+              </li>
+              {{!--
+              <li class="disabled">
+                <a>Disabled</a>
+              </li> --}}
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                  Activity
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#blogtab" data-toggle="tab" class="blogactivitytab">Blogs</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#commenttab" data-toggle="tab" class="commentactivitytab">Comments</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="aboutmetab">
+                <p>
+                  <!-- About me section -->
+                  {{> aboutme aboutme=aboutme}}
+                  <!-- /. About me section -->
+                </p>
+              </div>
+              <div class="tab-pane fade" id="personaltab">
+                <p>
+                  {{> personaldetails personaldetails=personaldetails}}
+                </p>
+              </div>
+              <div class="tab-pane fade" id="proffessionaltab">
+                <p>
+                  {{> proffessionaldetails proffessionaldetails=proffessionaldetails}}
+                </p>
+              </div>
+              <div class="tab-pane fade" id="blogtab">
+                <p>
+                  <div class="bs-docs-section">
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
 
-                        <div class="alert alert-info">
-                          <strong>View Your Blog History!</strong>
+                          <div class="alert alert-info">
+                            <strong>View Your Blog History!</strong>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="nobloghistoryonprofile hidden">
-                          <p class="text-danger"><strong>Please select a valid Blog!!!</strong></p>
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="nobloghistoryonprofile hidden">
+                            <p class="text-danger">
+                              <strong>Please select a valid Blog!!!</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="form-group bloglistbyuserid">
-                          <div class="form-group serach">
-                            <div>
-                              <div class="input-group">
-                                <input type="text" class="form-control input-sm" id="inputSearch" placeholder="Search Blog Name">
-                                <span class="input-group-btn">
-                                   <button type="submit" id="BlogHistorySearchBtn" class="btn btn-info btn-sm ">
-                                   <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                </span>
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="form-group bloglistbyuserid">
+                            <div class="form-group serach">
+                              <div>
+                                <div class="input-group">
+                                  <input type="text" class="form-control input-sm" id="inputSearch" placeholder="Search Blog Name">
+                                  <span class="input-group-btn">
+                                    <button type="submit" id="BlogHistorySearchBtn" class="btn btn-info btn-sm ">
+                                      <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="bloghistorybyuserid">
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="bloghistorybyuserid">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </p>
-            </div>
-            <div class="tab-pane fade" id="commenttab">
-              <p>
-                <div class="bs-docs-section">
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
+                </p>
+              </div>
+              <div class="tab-pane fade" id="commenttab">
+                <p>
+                  <div class="bs-docs-section">
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
 
-                        <div class="alert alert-info">
-                          <strong>View Blog Wise Comment and take action</strong>
+                          <div class="alert alert-info">
+                            <strong>View Blog Wise Comment and take action</strong>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="nocommenthistoryonprofile hidden">
-                          <p class="text-danger"><strong>Please select a valid Blog!!!</strong></p>
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="nocommenthistoryonprofile hidden">
+                            <p class="text-danger">
+                              <strong>Please select a valid Blog!!!</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="form-group bloglistbyuseridcmnt">
-                          <div class="form-group serach">
-                            <div>
-                              <div class="input-group">
-                                <input type="text" class="form-control input-sm" id="inputSearchcmnt" placeholder="Search Blog Name">
-                                <span class="input-group-btn">
-                                   <button type="submit" id="CommentHistorySearchBtn" class="btn btn-info btn-sm ">
-                                   <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                </span>
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="form-group bloglistbyuseridcmnt">
+                            <div class="form-group serach">
+                              <div>
+                                <div class="input-group">
+                                  <input type="text" class="form-control input-sm" id="inputSearchcmnt" placeholder="Search Blog Name">
+                                  <span class="input-group-btn">
+                                    <button type="submit" id="CommentHistorySearchBtn" class="btn btn-info btn-sm ">
+                                      <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="rowTempered">
-                    <div class="col-lg-12">
-                      <div class="bs-component">
-                        <div class="commenthistorybyblogid">
+                    <div class="rowTempered">
+                      <div class="col-lg-12">
+                        <div class="bs-component">
+                          <div class="commenthistorybyblogid">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
+        <!--/.Second column-->
       </div>
-      <!--/.Second column-->
-    </div>
-  {{!-- </div>
-</div> --}}
+      {{!-- </div>
+  </div> --}}
 </div>
 
 <input type="hidden" name="userid" id="userid" value="{{user._id}}" />
