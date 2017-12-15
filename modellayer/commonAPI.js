@@ -12,6 +12,8 @@ var nodemailer = require('nodemailer');
 var changePwd = require("../modellayer/changepwdmodel");
 var dashbordModel = require("../modellayer/dashboardModel");
 var log = require("./log");
+var fs = require('fs');
+var handlebars = require("handlebars");
 
 // save user information 
 router.post("/data/signUp", function(req, res) {
@@ -82,58 +84,82 @@ router.post("/data/getblog", function(req, res) {
 
 router.get('/subscribe', function(req, res) {
 
-    var service = config.get("nodeMailer.service");
-    var uid = config.get("nodeMailer.user");
-    var pwd = config.get("nodeMailer.pass");
+    var name = req.query.name;
+    var email = req.query.emailID;
 
     //console.log("name: " + req.query.name + " , emailID : " + req.query.emailID + " , dateTime : " + new Date().toDateString());
+    var isValid = (name != null && email != null);
 
-    var path = "Thanks for subscribing !! " + req.query.name;
-    var mailOptions = {
-        from: uid,
-        to: req.query.emailID,
-        subject: 'Subscribe user for node app',
-        text: path
-    };
+    if (isValid) {
+        var service = config.get("nodeMailer.service");
+        var uid = config.get("nodeMailer.user");
+        var pwd = config.get("nodeMailer.pass");
+        var path = "./public/template/subscribe.html";
 
-    var transporter = nodemailer.createTransport({
-        service: service,
-        auth: {
-            user: uid,
-            pass: pwd
-        }
-    });
+        readHTMLFile(path, function(err, html) {
+            if (err) {
+                log.logger.error("readHTMLFile erorr : " + err);
+                res.json(false);
+            } else {
 
-    transporter.sendMail(mailOptions, function(error, info) {
-        if (error) {
-            console.log("sendMail error");
-            res.json(false);
-        } else {
-            console.log("success");
-            let path = serviceURL + "/updatesubscribe/";
-            //console.log("path:" + path);
+                var template = handlebars.compile(html);
 
-            var data = {
-                "name": req.query.name,
-                "emailID": req.query.emailID
-            };
+                var replacements = {
+                    name: name
+                };
 
-            axios.post(path, data)
-                .then(function(response) {
-                    console.log("api response:" + response);
-                    res.json(true);
-                })
-                .catch(function(error) {
-                    console.log("api error:" + error);
-                    res.json({ "Error": "updatesubscribe api error" });
+                var htmlToSend = template(replacements);
+                console.log(htmlToSend);
+
+                var mailOptions = {
+                    from: uid,
+                    to: email,
+                    subject: 'Thanks for Subscribing to our new-letters',
+                    html: htmlToSend
+                };
+
+                var transporter = nodemailer.createTransport({
+                    service: service,
+                    auth: {
+                        user: uid,
+                        pass: pwd
+                    }
                 });
-        }
-    });
+
+                transporter.sendMail(mailOptions, function(error, response) {
+                    if (error) {
+                        console.log("error");
+                        res.json(false);
+                    } else {
+                        console.log("success");
+                        let path = serviceURL + "/updatesubscribe/";
+
+                        var data = {
+                            "name": name,
+                            "emailID": email
+                        };
+
+                        axios.post(path, data)
+                            .then(function(response) {
+                                console.log("api response:" + response);
+                                res.json(true);
+                            })
+                            .catch(function(error) {
+                                console.log("api error:" + error);
+                                res.json({ "Error": "updatesubscribe api error" });
+                            });
+                    }
+                });
+            }
+        });
+    } else {
+        log.logger.error("CommonAPI : subscribe call : error : data not define");
+        res.json({ "Error": "data not define" });
+    }
 });
 
 // valdidate user & send passsword reset mail to user
 router.post('/data/fpwd', function(req, res) {
-    console.log("step 1.1");
     var service = config.get("nodeMailer.service");
     var uid = config.get("nodeMailer.user");
     var pwd = config.get("nodeMailer.pass");
@@ -143,45 +169,60 @@ router.post('/data/fpwd', function(req, res) {
         "email": emailid,
     };
 
-    console.log("2 " + path + " , " + emailid);
-
     axios.post(path, result)
         .then(function(response) {
-            console.log("3 " + response.data.result.count);
             if (response != null && response.data.result != null && response.data.result.count > 0) {
-                console.log("4");
                 var DT = new Date().toISOString();
                 var userid = response.data.result.result._id;
                 path = config.get("nodeMailer.path") + "/auth/resetpwd?i=" +
                     userid + "&ts=" + DT;
-                console.log("validateUserOnReset api response:" + path);
-                var mailOptions = {
-                    from: uid,
-                    to: emailid,
-                    subject: 'Blogger app reset password alert!',
-                    text: path
-                };
-                var transporter = nodemailer.createTransport({
-                    service: service,
-                    auth: {
-                        user: uid,
-                        pass: pwd
-                    }
-                });
-                transporter.sendMail(mailOptions, function(error, info) {
-                    if (error) {
-                        console.log("sendMail error");
+                var htmlPath = "./public/template/forgot-password-email.html";
+
+                readHTMLFile(htmlPath, function(err, html) {
+                    if (err) {
+                        console.log("readHTMLFile erorr : " + err);
+                        log.logger.error("readHTMLFile erorr : " + err);
                         res.json(false);
                     } else {
-                        console.log("Send fpwd success");
+                        var template = handlebars.compile(html);
 
-                        changePwd.triggerfpwdemail(userid, DT).then(function(results) {
-                            res.json(true);
-                        }).catch(function(err) {
-                            res.json({ "Error": "Forgot password email trigger api error" });
+                        var replacements = {
+                            url: path
+                        };
+
+                        var htmlToSend = template(replacements);
+
+                        var mailOptions = {
+                            from: uid,
+                            to: emailid,
+                            subject: 'Blogger app reset password alert!',
+                            html: htmlToSend
+                        };
+
+                        var transporter = nodemailer.createTransport({
+                            service: service,
+                            auth: {
+                                user: uid,
+                                pass: pwd
+                            }
                         });
 
-                        res.json(true);
+                        transporter.sendMail(mailOptions, function(error, response) {
+                            if (error) {
+                                console.log("forgot password send mail error");
+                                res.json(false);
+                            } else {
+                                console.log("Send fpwd success");
+
+                                changePwd.triggerfpwdemail(userid, DT).then(function(results) {
+                                    res.json(true);
+                                }).catch(function(err) {
+                                    res.json({ "Error": "Forgot password email trigger api error" });
+                                });
+
+                                res.json(true);
+                            }
+                        });
                     }
                 });
             } else
@@ -424,7 +465,6 @@ router.post("/data/updateBlogTableRecords", function(req, res) {
         res.json(false);
 });
 
-
 router.get("/data/GetUserSerach", function(req, res) {
     dashbordModel.GetUserSerach().then(data => {
         if (data != null) {
@@ -476,3 +516,15 @@ router.post('/data/ResetUserPwd', function(req, res, next) {
         res.json(false);
     }
 });
+
+var readHTMLFile = function(path, callback) {
+    fs.readFile(path, { encoding: 'utf-8' }, function(err, html) {
+        if (err) {
+            console.log(err);
+            throw err;
+            callback(err);
+        } else {
+            callback(null, html);
+        }
+    });
+};
