@@ -18,6 +18,7 @@
                 <strong>Welcome {{user.username}}</strong>,Please click here to verify your registered email. <input type="submit" value="Verify Email" class="btn btn-warning btn-sm">
             <input type="hidden" id="hndemailid" name="hndemailid" value={{user.email}} />
             <input type="hidden" id="hnduserid" name="hnduserid" value={{user._id}} />
+            <input type="hidden" id="hndusername" name="hndusername" value={{user.username}} />
             </div>
         </form>
     </div>
