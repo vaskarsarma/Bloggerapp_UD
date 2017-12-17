@@ -9,7 +9,7 @@ var log = require("./modellayer/log");
 var _ = require("lodash");
 var flash = require('connect-flash');
 app.locals.config = config.get('app.restAPIEndpoint.v1ContractPath');
-//console.log(app.locals.config);
+console.log(app.locals.config);
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
