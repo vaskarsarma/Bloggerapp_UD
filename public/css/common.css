@@ -122,12 +122,13 @@ input {
 
 .close {
     cursor: pointer;
-    background: transparent;
-    color: black;
+    /* background: transparent; */
+    color: #fa8217 !important;
     border: 0;
     -webkit-appearance: none;
-    font-family: 'Glyphicons Halflings' !important;
-    font-size: 16.5px !important;
+    /* font-family: 'Glyphicons Halflings' !important; */
+    font-size: 27.5px !important;
+    opacity: 1.2
 }
 
 .close:hover,
@@ -166,6 +167,7 @@ div#divImage {
 .list-inline>li {
     margin: 24px 100px 0px 50px;
 }
+
 
 /* body {
     padding-top: 70px;
@@ -216,21 +218,21 @@ a.dropdown-toggle {
     margin: -6px 0px 0px 0px;
 }
 
-h4.list-group-item.active, 
-h4.list-group-item.active:focus, 
-h4.list-group-item.active:hover  {
+h4.list-group-item.active,
+h4.list-group-item.active:focus,
+h4.list-group-item.active:hover {
     background-color: #403c37;
     border-color: #403c37;
 }
 
-a.list-group-item:focus, 
+a.list-group-item:focus,
 a.list-group-item:hover {
     color: #ff6000;
 }
 
 a.signinlink:focus,
 a.signinlink:hover {
-    color : #ff6000;
+    color: #ff6000;
 }
 
 .ui-state-active,
@@ -239,11 +241,28 @@ a.signinlink:hover {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #403c37;
-	background: #403c37;
-	font-weight: normal;
-	color: #ffffff;
+    border: 1px solid #403c37;
+    background: #403c37;
+    font-weight: normal;
+    color: #ffffff;
 }
+
+.item img {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+}
+
+.imgcontainer:hover .item img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/* .imgcontainer:hover .item img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+} */
+
 
 /* .googleicon{
     width: 5%;

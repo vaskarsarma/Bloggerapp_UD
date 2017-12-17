@@ -1,6 +1,6 @@
 body { 
      font-family: Arial, Helvetica, sans-serif;
-     font-size: 16px;
+     /* font-size: 16px; */
      color: #000000;
      font-variant: normal;
 }
@@ -108,7 +108,7 @@ h2{
 }
 .modal-header{
 	border: 0;
-	background-image: url("../images/modal-bg.png");
+	/* background-image: url("../images/modal-bg.png"); */
 	background-position:top left;
 	background-repeat: repeat-x; 
 }
@@ -157,7 +157,7 @@ h2{
 	width: 90%;
 	margin: auto;
 	color: #fff;
-	padding: 30px 0;
+	padding: 7px 0;
 	height: auto;
 	overflow: hidden;
 	text-align: right;

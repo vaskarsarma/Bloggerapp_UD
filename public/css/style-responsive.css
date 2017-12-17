@@ -31,7 +31,7 @@
   .banner-txt{
     margin:25% 0 0 20%;
     font-size: 25px;
-    line-height: 25px;
+    /* line-height: 25px; */
   }
   .banner-txt span{
     font-size: 15px;
@@ -56,7 +56,8 @@
     padding-bottom: 10px;
   }
   .blogCategory-box img{
-    width: 20%;
+    width: 70%;
+    cursor: pointer;
   }
   .blog-panel h2{
     font-size: 23px;
@@ -118,7 +119,8 @@
     padding-bottom: 10px;
   }
   .blogCategory-box img{
-    width: 20%;
+    width: 70%;
+    cursor: pointer;
   }
   .blog-panel h2{
     font-size: 25px;
@@ -179,7 +181,8 @@
     padding-bottom: 10px;
   }
   .blogCategory-box img{
-    width: 10%;
+    width: 70%;
+    cursor: pointer;
   }
   .blog-panel h2{
     font-size: 25px;
@@ -240,7 +243,8 @@
     padding-bottom: 0;
   }
   .blogCategory-box img{
-    width: 25%;
+    width: 70%;
+    cursor: pointer;
   }
   .blog-panel h2{
     font-size: 30px;
@@ -279,11 +283,11 @@
   }
   .banner-txt{
     margin:10% 0 0 20%;
-    font-size: 60px;
-    line-height: 55px;
+    font-size: 45px;
+    /* line-height: 55px; */
   }
   .banner-txt span{
-    font-size: 30px;
+    font-size: 25px;
   }
   .footer{
     font-size: 16px;
@@ -305,7 +309,8 @@
     padding-bottom: 0;
   }
   .blogCategory-box img{
-    width: 25%;
+    width: 70%;
+    cursor: pointer;
   }
   .blog-panel h2{
     font-size: 30px;
@@ -331,8 +336,16 @@
     padding: 35px 15px 0 15px;
   }
   .blogCategory-box img{
-    width: 25%;
+    width: 70%;
+    cursor: pointer;
   }
+  
+  .item:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
   .blog-panel h2{
     font-size: 30px;
   }
