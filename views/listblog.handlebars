@@ -1,7 +1,36 @@
 <div class="row">
-    <div class="my-container">
+    <div class="my-container ankit">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 my-column blogdata">
             {{#each blogs.result}}
+            <article class="post">
+                <div class="post-header">
+                    <h2>
+                        <span>
+                            <a href="/viewblog/showdetails/{{this._id}}">{{{this.topic}}}</a>
+                        </span>
+                    </h2>
+                </div>
+                <div style="display: block;">
+                    <div class="post-entry">
+                        {{{this.content}}}
+                        <p>
+                            <a class="more-link" href="/viewblog/showdetails/{{this._id}}">Continue Reading</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="bottom-blog">
+                    <ul class="blog-date pull-left ccc" data-id="18">
+                        <li>
+                            <i class="fa fa-clock-o"></i>Wednesday, March 04, 2015</li>
+                        <li>
+                            <i class="fa fa-comments-o"></i>
+                            <a href="http://elegant-themexpose.blogspot.ae/2015/03/my-style-statement.html#comments">14 Comments</a>
+                        </li>
+                    </ul>
+                    <ul class="group-share pull-right"></ul>                    
+                </div>
+            </article>
+            {{!--
             <div class="blog-box">
                 <div class="blog-box-left">
                     {{#ShowDate this.creationdate}}{{/ShowDate}}
@@ -15,12 +44,12 @@
                     <span class="limitblogdata">{{{this.content}}}</span>
                     <a href="/viewblog/showdetails/{{this._id}}">Read more...</a>
                 </div>
-            </div>
-            {{/each}}
+            </div> --}} {{/each}}
             <div id="divImage" data-cid="{{blogCID}}" data-lastblogid="{{lastblogid}}">
                 <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span>
             </div>
         </div>
+        {{!--
         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 my-column">
             {{#each categorylist}}
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -29,7 +58,7 @@
                 </a>
             </div>
             {{/each}}
-        </div>
+        </div> --}}
     </div>
 </div>
 

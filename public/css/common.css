@@ -257,16 +257,117 @@ a.ui-button:active,
     transform: scale(1.2);
 }
 
+body {
+    color: #777 !important;
+    font-family: Lora !important;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75 !important;
+    letter-spacing: 0px;
+    text-transform: none;
+    background-color: #FFF;
+}
 
-/* .imgcontainer:hover .item img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-} */
+.post-entry a.more-link {
+    margin-top: 40px;
+    border-radius: 1px;
+    text-transform: uppercase;
+    line-height: 1.75;
+    color: #5d5d5d;
+    border: 1px solid #e6c55d;
+    letter-spacing: 2px;
+    font-size: 10px;
+    padding: 0 15px;
+    font-family: 'Montserrat';
+    line-height: 38px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: transparent;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.post-header {
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.post-header h1 a, .post-header h2 a, .post-header h1 {
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.bottom-blog {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px dashed #e8e8e8;
+    padding: 0px 0px 0px 0px;
+    margin-top: 30px;
+    margin: 0;    
+}
+
+.blog-date li {
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+    margin-right: 14px;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+.blog-date li .fa {
+    font-size: 16px;
+    color: #e6c55d;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+ .group-share li {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.group-share li a {
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #e6c55d;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #cea525;
+}
+
+a, #footer-logo p i {
+    color: #646464;
+}
 
 
-/* .googleicon{
-    width: 5%;
-    height: 70px; 
-    margin: 0px 0px 0px 0px;
-    background-color: red;
-} */
+p {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+
+article.post {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(193, 193, 193)), to(white));
+}

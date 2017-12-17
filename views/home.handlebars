@@ -14,7 +14,8 @@
             {{#each category}}
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 blogCategory-box blogcategory">
                <div class="imgcontainer"><div class="item">
-                <img alt="{{this.name}}" src="{{this.icon}}"  /></div></div>
+                <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid"><img alt="{{this.name}}" src="{{this.icon}}"  /></a>
+                </div></div>
                 <h2>
                   {{this.name}}
                 </h2>
