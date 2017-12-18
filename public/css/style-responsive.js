@@ -29,80 +29,80 @@ export default StyleSheet.create({
   'panelwith-nav-tabs nav-justified': {
     'marginBottom': [{ 'unit': 'px', 'value': -1 }]
   },
-  'with-nav-tabspanel-default nav-tabs > li > a': {
+  'with-nav-tabspanel-default nav-tabs>li>a': {
     'color': '#636262'
   },
-  'with-nav-tabspanel-default nav-tabs > li > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>li>a:hover': {
     'color': '#636262'
   },
-  'with-nav-tabspanel-default nav-tabs > li > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>li>a:focus': {
     'color': '#636262'
   },
-  'with-nav-tabspanel-default nav-tabs > open > a': {
+  'with-nav-tabspanel-default nav-tabs>open>a': {
     'color': '#777',
     'backgroundColor': '#ddd',
     'borderColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > open > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>open>a:hover': {
     'color': '#777',
     'backgroundColor': '#ddd',
     'borderColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > open > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>open>a:focus': {
     'color': '#777',
     'backgroundColor': '#ddd',
     'borderColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > li > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>li>a:hover': {
     'color': '#777',
     'backgroundColor': '#ddd',
     'borderColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > li > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>li>a:focus': {
     'color': '#777',
     'backgroundColor': '#ddd',
     'borderColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > liactive > a': {
+  'with-nav-tabspanel-default nav-tabs>liactive>a': {
     'color': '#fff',
     'backgroundColor': '#b8afa8',
     'borderColor': '#b8afa8',
     'borderBottomColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > liactive > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>liactive>a:hover': {
     'color': '#fff',
     'backgroundColor': '#b8afa8',
     'borderColor': '#b8afa8',
     'borderBottomColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > liactive > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>liactive>a:focus': {
     'color': '#fff',
     'backgroundColor': '#b8afa8',
     'borderColor': '#b8afa8',
     'borderBottomColor': 'transparent'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu': {
     'backgroundColor': '#f5f5f5',
     'borderColor': '#b8afa8'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > li > a': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>li>a': {
     'color': '#777'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > li > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>li>a:hover': {
     'backgroundColor': '#ddd'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > li > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>li>a:focus': {
     'backgroundColor': '#ddd'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > active > a': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>active>a': {
     'color': '#fff',
     'backgroundColor': '#b8afa8'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > active > a:hover': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>active>a:hover': {
     'color': '#fff',
     'backgroundColor': '#b8afa8'
   },
-  'with-nav-tabspanel-default nav-tabs > lidropdown dropdown-menu > active > a:focus': {
+  'with-nav-tabspanel-default nav-tabs>lidropdown dropdown-menu>active>a:focus': {
     'color': '#fff',
     'backgroundColor': '#b8afa8'
   }

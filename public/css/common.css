@@ -275,7 +275,7 @@ body {
     text-transform: uppercase;
     line-height: 1.75;
     color: #5d5d5d;
-    border: 1px solid #e6c55d;
+    border: 1px solid #fb8217;
     letter-spacing: 2px;
     font-size: 10px;
     padding: 0 15px;
@@ -294,7 +294,9 @@ body {
     text-align: center;
 }
 
-.post-header h1 a, .post-header h2 a, .post-header h1 {
+.post-header h1 a,
+.post-header h2 a,
+.post-header h1 {
     font-family: Raleway;
     font-size: 30px;
     font-weight: 400;
@@ -303,15 +305,16 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #222;
+    text-decoration: none;
 }
 
 .bottom-blog {
     display: inline-block;
     width: 100%;
-    border-top: 1px dashed #e8e8e8;
+    border-top: 1px dashed #fb8217;
     padding: 0px 0px 0px 0px;
     margin-top: 30px;
-    margin: 0;    
+    margin: 0;
 }
 
 .blog-date li {
@@ -321,18 +324,20 @@ body {
     margin-right: 14px;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
     list-style: none;
 }
 
 .blog-date li .fa {
     font-size: 16px;
-    color: #e6c55d;
+    color: #fb8217;
     margin-right: 10px;
     vertical-align: middle;
 }
 
- .group-share li {
+.group-share li {
     display: inline-block;
     margin-left: 6px;
 }
@@ -343,7 +348,7 @@ ol, ul, li {
     line-height: 27px;
     text-align: center;
     font-size: 13px;
-    border: 1px solid #e6c55d;
+    border: 1px solid #fb8217;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -354,20 +359,46 @@ ol, ul, li {
 
 a {
     text-decoration: none;
-    color: #cea525;
+    color: #fb8217;
 }
 
-a, #footer-logo p i {
+a,
+#footer-logo p i {
     color: #646464;
 }
 
-
 p {
     margin: 0 0 10px;
+}
+
+.post-header a:hover {
+    opacity: .2;
+}
+
+span.glyphicon {
+    color: #fb8217;
+}
+
+body {
+    background-image: url('/images/background.png');
+    /* background-color: #cccccc; */
+}
+
+.post-entry .continuesRead {
     text-align: center;
 }
 
-
-article.post {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgb(193, 193, 193)), to(white));
+.blogCategory-box {
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    width: 26%;
+    background: #fff;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    overflow: hidden;
+    margin: 0px 37px 30px 36px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    column-gap: 20px;
 }

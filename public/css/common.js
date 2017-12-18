@@ -249,14 +249,158 @@ export default StyleSheet.create({
     'WebkitTransform': 'scale(1.2)',
     'transform': 'scale(1.2)'
   },
-  // .imgcontainer:hover .item img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-  // .googleicon{
-    width: 5%;
-    height: 70px; 
-    margin: 0px 0px 0px 0px;
-    background-color: red;
-}
+  'body': {
+    'color': '#777 !important',
+    'fontFamily': 'Lora !important',
+    'fontSize': [{ 'unit': 'px', 'value': 15 }],
+    'fontWeight': '400',
+    'fontStyle': 'normal',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.75 }, { 'unit': 'string', 'value': '!important' }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 0 }],
+    'textTransform': 'none',
+    'backgroundColor': '#FFF'
+  },
+  'post-entry amore-link': {
+    'marginTop': [{ 'unit': 'px', 'value': 40 }],
+    'borderRadius': '1px',
+    'textTransform': 'uppercase',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
+    'color': '#5d5d5d',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
+    'fontSize': [{ 'unit': 'px', 'value': 10 }],
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }],
+    'fontFamily': ''Montserrat'',
+    'lineHeight': [{ 'unit': 'px', 'value': 38 }],
+    'display': 'inline-block',
+    'textTransform': 'uppercase',
+    'background': 'transparent',
+    'WebkitTransition': 'all 0.3s ease-in-out 0s',
+    'OTransition': 'all 0.3s ease-in-out 0s',
+    'transition': 'all 0.3s ease-in-out 0s'
+  },
+  'post-header': {
+    'marginBottom': [{ 'unit': 'px', 'value': 27 }],
+    'textAlign': 'center'
+  },
+  'post-header h1 a': {
+    'fontFamily': 'Raleway',
+    'fontSize': [{ 'unit': 'px', 'value': 30 }],
+    'fontWeight': '400',
+    'fontStyle': 'normal',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.25 }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 3 }],
+    'textTransform': 'uppercase',
+    'color': '#222',
+    'textDecoration': 'none'
+  },
+  'post-header h2 a': {
+    'fontFamily': 'Raleway',
+    'fontSize': [{ 'unit': 'px', 'value': 30 }],
+    'fontWeight': '400',
+    'fontStyle': 'normal',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.25 }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 3 }],
+    'textTransform': 'uppercase',
+    'color': '#222',
+    'textDecoration': 'none'
+  },
+  'post-header h1': {
+    'fontFamily': 'Raleway',
+    'fontSize': [{ 'unit': 'px', 'value': 30 }],
+    'fontWeight': '400',
+    'fontStyle': 'normal',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.25 }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 3 }],
+    'textTransform': 'uppercase',
+    'color': '#222',
+    'textDecoration': 'none'
+  },
+  'bottom-blog': {
+    'display': 'inline-block',
+    'width': [{ 'unit': '%H', 'value': 1 }],
+    'borderTop': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'marginTop': [{ 'unit': 'px', 'value': 30 }],
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'blog-date li': {
+    'display': 'inline-block',
+    'fontSize': [{ 'unit': 'px', 'value': 12 }],
+    'fontStyle': 'italic',
+    'marginRight': [{ 'unit': 'px', 'value': 14 }]
+  },
+  'ol': {
+    'listStyle': 'none'
+  },
+  'ul': {
+    'listStyle': 'none'
+  },
+  'li': {
+    'listStyle': 'none'
+  },
+  'blog-date li fa': {
+    'fontSize': [{ 'unit': 'px', 'value': 16 }],
+    'color': '#fb8217',
+    'marginRight': [{ 'unit': 'px', 'value': 10 }],
+    'verticalAlign': 'middle'
+  },
+  'group-share li': {
+    'display': 'inline-block',
+    'marginLeft': [{ 'unit': 'px', 'value': 6 }]
+  },
+  'group-share li a': {
+    'width': [{ 'unit': 'px', 'value': 27 }],
+    'height': [{ 'unit': 'px', 'value': 27 }],
+    'lineHeight': [{ 'unit': 'px', 'value': 27 }],
+    'textAlign': 'center',
+    'fontSize': [{ 'unit': 'px', 'value': 13 }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'WebkitBorderRadius': '50%',
+    'MozBorderRadius': '50%',
+    'MsBorderRadius': '50%',
+    'OBorderRadius': '50%',
+    'borderRadius': '50%',
+    'display': 'inline-block'
+  },
+  'a': {
+    'textDecoration': 'none',
+    'color': '#fb8217'
+  },
+  'a': {
+    'color': '#646464'
+  },
+  '#footer-logo p i': {
+    'color': '#646464'
+  },
+  'p': {
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'post-header a:hover': {
+    'opacity': '.2'
+  },
+  'spanglyphicon': {
+    'color': '#fb8217'
+  },
+  'body': {
+    'backgroundImage': 'url('/images/background.png')',
+    // background-color: #cccccc;
+  },
+  'post-entry continuesRead': {
+    'textAlign': 'center'
+  },
+  'blogCategory-box': {
+    'textAlign': 'center',
+    'padding': [{ 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }],
+    'width': [{ 'unit': '%H', 'value': 0.26 }],
+    'background': '#fff',
+    'marginBottom': [{ 'unit': 'px', 'value': 20 }],
+    'verticalAlign': 'top',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ccc' }],
+    'borderRadius': '.3rem',
+    'overflow': 'hidden',
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 37 }, { 'unit': 'px', 'value': 30 }, { 'unit': 'px', 'value': 36 }],
+    'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19)' }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.23)' }],
+    'columnGap': [{ 'unit': 'px', 'value': 20 }]
+  }
 });

@@ -236,10 +236,10 @@ export default StyleSheet.create({
     'margin': [{ 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'string', 'value': 'auto' }],
     'paddingBottom': [{ 'unit': 'px', 'value': 20 }]
   },
-  'blogCategory-box': {
-    'textAlign': 'center',
-    'padding': [{ 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 30 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 30 }]
-  },
+  // .blogCategory-box{
+	text-align: center;
+	padding: 15px 30px 15px 30px;
+}
   'blogCategory-box p': {
     'textAlign': 'left'
   },
