@@ -417,7 +417,7 @@ article.post {
     column-gap: 20px;
 }
 
-img.img-responsive {
+img.imgPostImage {
     width: 60%;
     display: block;
     margin: 0 auto;
@@ -440,4 +440,40 @@ a.loadmore {
     font-weight: bold;
     font-size: 14px;
     text-decoration: none;
+}
+
+.side-item {
+    overflow: hidden;
+    margin: 10px 0px 31px 10px;
+    padding: 0px 0px 0px 0px;
+}
+
+.side-image {
+    float: left;
+    margin-right: 14px;
+}
+
+.side-item-text {
+    overflow: hidden;
+}
+
+.sideText {
+    font-size: 15px;
+    margin: 15px 0px 0px 0px;    
+    color: #777 !important;
+    font-family: Lora !important;
+}
+
+span.side-item-meta {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #999;
+    font-style: italic;
+    font-family: "Open Sans";
+    margin: 13px 10px 8px 1px;
+}
+
+img.imgSideImage{
+width: 86px;
+height: auto;
 }

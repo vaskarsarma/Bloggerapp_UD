@@ -13,7 +13,7 @@
                 <div style="display: block;">                    
                     <div class="post-image">                       
                         <a href="/viewblog/showdetails/{{this._id}}">
-                            <img class="img-responsive" src="http://4.bp.blogspot.com/-9gn_LBV602M/VbNkAXM7TGI/AAAAAAAAGUs/1Ts7hsw2iqw/s1600/travel04.jpg">
+                            <img class="img-responsive imgPostImage" src="http://4.bp.blogspot.com/-9gn_LBV602M/VbNkAXM7TGI/AAAAAAAAGUs/1Ts7hsw2iqw/s1600/travel04.jpg">
                         </a>
                     </div>
                     <div class="post-entry">
@@ -45,13 +45,24 @@
             </div>
         </div>         
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 my-column">
-            {{#each categorylist}}           
-                {{!-- <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
-                    <img alt="{{this.name}}" src="{{this.icon}}" />
-                </a>  --}}
-                <a data-key="{{this.key}}" href="#" class="blogctid">
-                    <img alt="{{this.name}}" src="{{this.icon}}" />
-                </a>           
+            {{#each categorylist}}  
+            {{!-- <div class="col-lg-12 col-sm-6 col-xs-6"> --}}
+                <div class="side-item">
+                    <div class="side-image">
+                        <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
+                            <img class="imgSideImage img-responsive" src="{{this.icon}}">
+                        </a>
+                    </div>
+                    <div class="side-item-text">
+                        <h4 class="sideText">
+                            <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
+                            {{this.name}}
+                            </a>
+                        </h4>
+                        {{!-- <span class="side-item-meta">04 Mar 2015</span> --}}
+                    </div>
+                </div>
+            {{!-- </div> --}}
             {{/each}}
         </div>        
     </div>
