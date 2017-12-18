@@ -131,7 +131,7 @@ export default StyleSheet.create({
     'cursor': 'pointer'
   },
   'div#divImage': {
-    'textAlign': 'left'
+    'textAlign': 'center'
   },
   'col-lg-4divUserBlogs': {
     'minHeight': [{ 'unit': 'px', 'value': 100 }]
@@ -402,5 +402,41 @@ export default StyleSheet.create({
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 37 }, { 'unit': 'px', 'value': 30 }, { 'unit': 'px', 'value': 36 }],
     'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19)' }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.23)' }],
     'columnGap': [{ 'unit': 'px', 'value': 20 }]
+  },
+  'articlepost': {
+    'padding': [{ 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 15 }],
+    // width: 100%;
+    'background': '#fff',
+    'marginBottom': [{ 'unit': 'px', 'value': 20 }],
+    'verticalAlign': 'top',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ccc' }],
+    'borderRadius': '.3rem',
+    'overflow': 'hidden',
+    // margin: 0px 37px 30px 36px;
+    'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19)' }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.23)' }],
+    'columnGap': [{ 'unit': 'px', 'value': 20 }]
+  },
+  'imgimg-responsive': {
+    'width': [{ 'unit': '%H', 'value': 0.6 }],
+    'display': 'block',
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }]
+  },
+  'aloadmore': {
+    'borderRadius': '1px',
+    'textTransform': 'uppercase',
+    'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
+    'color': '#ffffff',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
+    'fontSize': [{ 'unit': 'px', 'value': 10 }],
+    'fontFamily': ''Montserrat'',
+    'lineHeight': [{ 'unit': 'px', 'value': 38 }],
+    'display': 'inline-block',
+    'textAlign': 'center',
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 12 }],
+    'backgroundColor': '#fb8217',
+    'fontWeight': 'bold',
+    'fontSize': [{ 'unit': 'px', 'value': 14 }],
+    'textDecoration': 'none'
   }
 });
