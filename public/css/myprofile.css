@@ -344,8 +344,37 @@ hr {
     margin: 0 0 20px 0;
 }
 
-/* .alert-info {
-    color: #ffffff;
-    background-color: #403c37;
-    border-color: #403c37;
-} */
+.text-center {
+    text-align: center;
+    padding: 16px 1px 0px 0px;
+}
+
+.panel.panel-info.panel-border-radius.bg-form.uploadphotostatus {
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    overflow: hidden;
+    /* margin: 0px 37px 30px 36px; */
+    box-shadow: inset 1px 3px 20px 0px rgba(0, 0, 0, 0.27), 0 6px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: black;
+    column-gap: 20px;
+    height: auto;
+}
+
+div#myTabContent {
+    padding: 5px 5px 5px 5px;
+    width: 98%;
+    background: #fff;
+    /* margin-bottom: 20px; */
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    /* overflow: hidden; */
+    margin: -3px 0px 0px 0px;
+    box-shadow: 0 10px 19px 0px rgba(0, 0, 0, 0.09), 12px 9px 20px 0px rgba(0, 0, 0, 0.07);
+    column-gap: 20px;
+}

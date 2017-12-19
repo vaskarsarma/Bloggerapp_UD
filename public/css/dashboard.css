@@ -96,10 +96,76 @@ span.ui-accordion-header-icon.ui-icon {
     margin-top: 5px
 }
 
+span.glyphicon {
+    color: white
+}
 
-/* .ui-state-active,
-.ui-widget-content,
-.ui-state-active {
-    border: black;
-    background: #e9d5ae;
-} */
+.dashboard .close {
+    color: #111 !important;
+    font-family: 'Glyphicons Halflings' !important;
+    font-size: 19.5px !important;
+    opacity: 1.2;
+}
+
+.dashboard .panel-heading {
+    background-color: #3498db;
+    font-size: large;
+    color: white;
+}
+
+.dashboard .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.dashboard .btn.btn-primary.btn-xs.userDataColumn {
+    font-size: 16px !important;
+}
+
+.dashboard #UserSearchBtn {
+    background-color: #3498db;
+}
+
+.dashboard #graphContainer {
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    overflow: hidden;
+    /* margin: 0px 37px 30px 36px; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    column-gap: 20px;
+}
+
+.dashboard #loginGraphContainer {
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    overflow: hidden;
+    /* margin: 0px 37px 30px 36px; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    column-gap: 20px;
+}
+
+.col-lg-12.table-responsive.divUserInnerTable {
+    padding: 10px 10px 10px 10px;
+    width: 98%;
+    background: #fff;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    overflow: hidden;
+    margin: 0px 14px 0px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    column-gap: 20px;
+}

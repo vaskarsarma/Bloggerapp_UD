@@ -258,7 +258,7 @@ a.ui-button:active,
 }
 
 body {
-    color: #777 !important;
+    /* color: #777 !important; */
     font-family: Lora !important;
     font-size: 15px;
     font-weight: 400;

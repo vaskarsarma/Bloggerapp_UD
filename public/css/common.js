@@ -250,7 +250,7 @@ export default StyleSheet.create({
     'transform': 'scale(1.2)'
   },
   'body': {
-    'color': '#777 !important',
+    // color: #777 !important;
     'fontFamily': 'Lora !important',
     'fontSize': [{ 'unit': 'px', 'value': 15 }],
     'fontWeight': '400',
