@@ -382,10 +382,9 @@ export default StyleSheet.create({
   'spanglyphicon': {
     'color': '#fb8217'
   },
-  'body': {
-    'backgroundImage': 'url('/images/background.png')',
-    // background-color: #cccccc;
-  },
+  // body {
+    background-image: url('/images/background.png');    
+}
   'post-entry continuesRead': {
     'textAlign': 'center'
   },
@@ -553,12 +552,50 @@ export default StyleSheet.create({
     'position': 'relative'
   },
   'acitaUser': {
-    'display': 'block',
+    // display: block;
     'fontSize': [{ 'unit': 'px', 'value': 14 }],
     'textTransform': 'uppercase',
     'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
     'marginBottom': [{ 'unit': 'px', 'value': 6 }],
     'color': '#333',
     'fontFamily': '"Open Sans"'
+  },
+  '#blog-pager': {
+    'clear': 'both',
+    'fontSize': [{ 'unit': 'px', 'value': 16 }],
+    'lineHeight': [{ 'unit': 'string', 'value': 'normal' }],
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }],
+    'fontFamily': 'times new roman',
+    'overflow': 'hidden'
+  },
+  '#blog-pager-newer-link': {
+    'display': 'inline',
+    'float': 'left',
+    'width': [{ 'unit': '%H', 'value': 0.5 }],
+    'textAlign': 'left',
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  '#blog-pager-older-link': {
+    'display': 'inline',
+    'float': 'right',
+    'width': [{ 'unit': '%H', 'value': 0.5 }],
+    'textAlign': 'right',
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'h4nextLink': {
+    'color': '#fb8217'
+  },
+  'h4previousLink': {
+    'color': '#fb8217'
+  },
+  'citeuser': {
+    'fontStyle': 'normal',
+    'fontWeight': 'bolder',
+    'fontSize': [{ 'unit': 'px', 'value': 18 }],
+    'textTransform': 'uppercase'
+  },
+  'spandatetimesecondary-text': {
+    'marginLeft': [{ 'unit': '%H', 'value': 0.55 }]
   }
 });

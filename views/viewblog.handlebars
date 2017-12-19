@@ -11,11 +11,33 @@
                 <span>{{{blog.content}}}</span>
             </div>
 
-            {{#Compare blog.prevblogid "!==" "0"}}
+            <div class="blog-pager" id="blog-pager">
+                {{#Compare blog.prevblogid "!==" "0"}}
+                <span id="blog-pager-newer-link">
+                    <a class="blog-pager-newer-link" href="/viewblog/showdetails/{{blog.prevblogid}}" id="Blog1_blog-pager-newer-link" title="Newer Post">
+                        <h4 class="previousLink">
+                            <b>← Previous Story</b>
+                        </h4>
+                        <h3></h3>
+                        <h3></h3>
+                    </a>
+                </span>
+                {{/Compare}} {{#Compare blog.nextblogid "!==" "0"}}
+                <span id="blog-pager-older-link">
+                    <a class="blog-pager-older-link" href="/viewblog/showdetails/{{blog.nextblogid}}" id="Blog1_blog-pager-older-link" title="Older Post">
+                        <h4 class="nextLink">
+                            <b>Next Story →</b>
+                        </h4>
+                        <h3></h3>
+                    </a>
+                </span>
+                {{/Compare}}
+            </div>
+            {{!-- {{#Compare blog.prevblogid "!==" "0"}}
             <a href="/viewblog/showdetails/{{blog.prevblogid}}">Previous</a>
             {{/Compare}} {{#Compare blog.nextblogid "!==" "0"}}
             <a href="/viewblog/showdetails/{{blog.nextblogid}}">Next</a>
-            {{/Compare}}
+            {{/Compare}} --}}
 
             <hr>
             <!-- Blog Comments - Comments Form -->
@@ -75,11 +97,10 @@
                                 {{#Compare ../user._id "==" this.userid}}
                                 <a class="citaUser" rel="nofollow" href="/myprofile/{{this.userid}}">{{this.username}}</a>
                                  {{else}} {{this.username}} {{/Compare}}
-                            </cite>
-                            <span class="icon user"></span>
-                            <span class="datetime secondary-text">
-                                {{!-- <a rel="nofollow" href="http://elegant-themexpose.blogspot.com/2015/03/draught-vaein-mynel.html?showComment=1439841860484#c4430442862520669599">August 17, 2015 at 1:04 PM</a> --}}
-                                {{#CovertISODate this.creationdate}}{{/CovertISODate}}
+                            </cite>                        
+                            <span class="datetime secondary-text">    
+                                 <span class="glyphicon glyphicon-time"></span>                            
+                                {{#ShowDate this.creationdate}}{{/ShowDate}}
                             </span>
                         </div>
                         <p id="bc_0_3MC" class="comment-content">{{this.comment}}</p>

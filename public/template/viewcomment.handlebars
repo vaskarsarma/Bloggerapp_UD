@@ -1,9 +1,27 @@
 {{#if comments}} {{#Compare comments.count ">" 0}} {{#each comments.result}}
 <div class="panel panel-default">
-    <div class="panel-body">
+    {{!-- <div class="panel-body">
         {{this.comment}}
     </div>
     <div class="panel-footer text-right">by <i>{{this.username}} <span class="glyphicon glyphicon-time"></span> Posted on 
-      {{#CovertISODate this.creationdate}}{{/CovertISODate}}</i></div>
+      {{#CovertISODate this.creationdate}}{{/CovertISODate}}</i></div> --}}
+
+    <div class="avatar-image-container">
+        <img class="avatarImage" src="//3.bp.blogspot.com/-lkPrFPfIPEw/VdBIZEgEPiI/AAAAAAAAAq8/Es0ZO9SXrh8/s35/*">
+    </div>
+    <div class="comment-block">
+        <div id="bc_0_3M" class="comment-header" kind="m">
+            <cite class="user">
+                {{#Compare ../user._id "==" this.userid}}
+                <a class="citaUser" rel="nofollow" href="/myprofile/{{this.userid}}">{{this.username}}</a>
+                {{else}} {{this.username}} {{/Compare}}
+            </cite>
+            <span class="icon user"></span>
+            <span class="datetime secondary-text">
+                {{#ShowDate this.creationdate}}{{/ShowDate}}
+            </span>
+        </div>
+        <p id="bc_0_3MC" class="comment-content">{{this.comment}}</p>
+    </div>
 </div>
 {{/each}} {{/Compare}}{{/if}} 
