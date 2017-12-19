@@ -22,9 +22,9 @@ export default StyleSheet.create({
   },
   'banner': {
     'backgroundColor': '#101010',
-    'backgroundImage': 'url("../images/banner.jpg")',
+    'backgroundImage': 'url("../images/geeks.jpg")',
     'backgroundRepeat': 'no-repeat',
-    'backgroundSize': '100% 100%',
+    // background-size: 100% 100%;
     'backgroundPosition': 'center 70px'
   },
   'banner-txt': {

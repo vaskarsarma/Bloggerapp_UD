@@ -361,8 +361,8 @@
     }
     .banner-txt {
         margin: 10% 0 0 20%;
-        font-size: 45px;
-        /* line-height: 55px; */
+        font-size: 40px;
+        line-height: 55px;
     }
     .banner-txt span {
         font-size: 25px;
@@ -507,12 +507,11 @@
         margin: 10px 0px 0px 10px;
         padding: 0px 0px 0px 0px;
     } */
-
     .side-item {
         text-align: center;
         padding: 15px 15px 15px 15px;
         width: 100%;
-        background: #fff;        
+        background: #fff;
         vertical-align: top;
         border: 1px solid #ccc;
         border-radius: .3rem;
@@ -521,18 +520,16 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         column-gap: 20px;
     }
-    .side-image {       
-        float: none;    
+    .side-image {
+        float: none;
         margin-right: 14px;
     }
-
-    img.imgSideImage {        
+    img.imgSideImage {
         display: block;
         margin: 0 auto;
         width: 50%;
         height: auto;
     }
-
     .sideText {
         font-size: 14px;
         margin: 15px 0px 30px 0px;
@@ -541,6 +538,4 @@
         word-wrap: normal;
         text-align: center;
     }
-
-
 }
