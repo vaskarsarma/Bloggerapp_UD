@@ -9,17 +9,19 @@ $(function() {
     if (blogid == "0") $('#divImage').addClass("hidden");
 
     $('#divImage').on("click", function() {
-        categorytype=$(this).data("cid");
+
+        run_waitMe("divLoadMore");
+        categorytype = $(this).data("cid");
         lastblogid = $(this).data("lastblogid");
         userid = $(this).data("userid");
 
-        GetBlogsInfo(lastblogid, categorytype, userid);
+        GetBlogsInfo(lastblogid, categorytype, userid, "divLoadMore");
     });
 
     $('.blogcategory').on("click", ".blogctid", function() {
         categorytype = $(this).data("key");
         console.log(categorytype);
-        GetBlogsInfo("0", categorytype, userid);
+        GetBlogsInfo("0", categorytype, userid, "blogdata");
     })
 
     limitBlogLength();
@@ -43,8 +45,8 @@ let limitBlogLength = () => {
     });
 };
 
-let GetBlogsInfo = (lastblogid, categorytype, userid) => {
-    run_waitMe("blogdata");
+let GetBlogsInfo = (lastblogid, categorytype, userid, divClass) => {
+    run_waitMe(divClass);
     $.when(GetCompiledTemplate("blogsection"), GetBlogsByStartIndex(lastblogid, categorytype))
         .done(function(template, json) {
 
@@ -72,7 +74,8 @@ let GetBlogsInfo = (lastblogid, categorytype, userid) => {
             else
                 $("#divImage").removeClass("hidden");
         });
-    stop_waitMe("blogdata");
+    //stop_waitMe("blogdata");
+    stop_waitMe(divClass);
 };
 
 let GetBlogsByStartIndex = (lastblogid, categorytype) => {

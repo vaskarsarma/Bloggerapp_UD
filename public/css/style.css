@@ -23,9 +23,9 @@ h2 {
 
 .banner {
     background-color: #101010;
-    background-image: url("../images/banner.jpg");
+    background-image: url("../images/geeks.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-position: center 70px;
 }
 

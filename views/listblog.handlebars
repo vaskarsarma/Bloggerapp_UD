@@ -1,6 +1,6 @@
 <div class="row">
     <div class="my-container ankit">
-        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 my-column blogdata">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 my-column blogdata">
             {{#each blogs.result}}
             <article class="post">
                 <div class="post-header">
@@ -10,9 +10,16 @@
                         </span>
                     </h2>
                 </div>
-                <div style="display: block;">
+                <div style="display: block;">                    
+                    <div class="post-image">                       
+                        <a href="/viewblog/showdetails/{{this._id}}">
+                            <img class="img-responsive imgPostImage" src="http://4.bp.blogspot.com/-9gn_LBV602M/VbNkAXM7TGI/AAAAAAAAGUs/1Ts7hsw2iqw/s1600/travel04.jpg">
+                        </a>
+                    </div>
                     <div class="post-entry">
-                        {{{this.content}}}
+                        <span class="limitblogdata">
+                            {{{this.content}}}
+                        </span>
                         <p class="continuesRead">
                             <a class="more-link" href="/viewblog/showdetails/{{this._id}}">Continue Reading</a>
                         </p>
@@ -20,51 +27,44 @@
                 </div>
                 <div class="bottom-blog">
                     <ul class="blog-date pull-left ccc" data-id="18">
-                        <li>
-                            {{!-- <i class="fa fa-comments-o" aria-hidden="true"></i> --}}
+                        <li>                           
                             <span class="glyphicon glyphicon-user"></span>
                             by {{#Compare ../user._id "==" this.userid}}
                             <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} {{/Compare}}
                         </li>
                         <li>
-                            <span class="glyphicon glyphicon-time"></span> {{#ShowDate this.creationdate}}{{/ShowDate}}</li>
-                        {{!-- <li>
-                            <i class="fa fa-comments-o"></i>
-                            <a href="http://elegant-themexpose.blogspot.ae/2015/03/my-style-statement.html#comments">14 Comments</a>
-                        </li> --}}
+                            <span class="glyphicon glyphicon-time"></span> {{#ShowDate this.creationdate}}{{/ShowDate}}</li>                       
                     </ul>
                     <ul class="group-share pull-right"></ul>                    
                 </div>
             </article>
-            {{!--
-            <div class="blog-box">
-                <div class="blog-box-left">
-                    {{#ShowDate this.creationdate}}{{/ShowDate}}
-                </div>
-                <div class="blog-box-right">
-                    <h2>{{{this.topic}}}</h2>
-                    <h5>by {{#Compare ../user._id "==" this.userid}}
-                        <a href="/myprofile/{{this.userid}}">{{this.createdby}}</a> {{else}} {{this.createdby}} {{/Compare}}
-                    </h5>
-
-                    <span class="limitblogdata">{{{this.content}}}</span>
-                    <a href="/viewblog/showdetails/{{this._id}}">Read more...</a>
-                </div>
-            </div> --}} {{/each}}
-            <div id="divImage" data-cid="{{blogCID}}" data-lastblogid="{{lastblogid}}">
-                <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span>
+           {{/each}}
+            <div id="divImage" class="divLoadMore" data-cid="{{blogCID}}" data-lastblogid="{{lastblogid}}">
+                {{!-- <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span> --}}
+                <a class="loadmore" href="#">load more</a>
             </div>
-        </div>
-        {{!--
-        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 my-column">
-            {{#each categorylist}}
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
-                    <img alt="{{this.name}}" src="{{this.icon}}" />
-                </a>
-            </div>
+        </div>         
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 my-column">
+            <h2 class="headertext"><span>Categories</span></h2>
+            {{#each categorylist}}  
+            {{!-- <div class="col-lg-12 col-sm-6 col-xs-6"> --}}
+                <div class="side-item">
+                    <div class="side-image">
+                        <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
+                            <img class="imgSideImage img-responsive" src="{{this.icon}}">
+                        </a>
+                    </div>
+                    {{!-- <div class="side-item-text">
+                        <h4 class="sideText">
+                            <a data-key="{{this.key}}" href="/listblog/{{this.key}}" class="blogctid">
+                            {{this.name}}
+                            </a>
+                        </h4>                        
+                    </div> --}}
+                </div>
+            {{!-- </div> --}}
             {{/each}}
-        </div> --}}
+        </div>        
     </div>
 </div>
 
