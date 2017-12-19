@@ -259,14 +259,15 @@ a.ui-button:active,
 
 body {
     /* color: #777 !important; */
-    font-family: Lora !important;
-    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.6;
     font-weight: 400;
-    font-style: normal;
-    line-height: 1.75 !important;
-    letter-spacing: 0px;
-    text-transform: none;
+    font-style: normal !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
     background-color: #FFF;
+    color: #333;
 }
 
 .post-entry a.more-link {
@@ -279,7 +280,7 @@ body {
     letter-spacing: 2px;
     font-size: 10px;
     padding: 0 15px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     line-height: 38px;
     display: inline-block;
     text-transform: uppercase;
@@ -297,7 +298,7 @@ body {
 .post-header h1 a,
 .post-header h2 a,
 .post-header h1 {
-    font-family: Raleway;
+    /* font-family: Raleway; */
     font-size: 30px;
     font-weight: 400;
     font-style: normal;
@@ -431,7 +432,7 @@ a.loadmore {
     border: 1px solid #fb8217;
     letter-spacing: 2px;
     font-size: 10px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     line-height: 38px;
     display: inline-block;
     text-align: center;
@@ -462,7 +463,7 @@ a.loadmore {
     font-size: 15px;
     margin: 15px 0px 0px 0px;
     color: #777 !important;
-    font-family: Lora !important;
+    /* font-family: Lora !important; */
 }
 
 span.side-item-meta {
@@ -470,7 +471,7 @@ span.side-item-meta {
     letter-spacing: 1px;
     color: #999;
     font-style: italic;
-    font-family: "Open Sans";
+    /* font-family: "Open Sans"; */
     margin: 13px 10px 8px 1px;
 }
 
@@ -482,7 +483,7 @@ img.imgSideImage {
 }
 
 h2.headertext span {
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -499,7 +500,7 @@ h2.headertext span {
 h2.headertext {
     position: relative;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
     font-weight: normal;
 }
 
@@ -581,7 +582,7 @@ a.citaUser {
     letter-spacing: 2px;
     margin-bottom: 6px;
     color: #333;
-    font-family: "Open Sans";
+    /* font-family: "Open Sans"; */
 }
 
 #blog-pager {
@@ -590,7 +591,7 @@ a.citaUser {
     line-height: normal;
     margin: 0;
     padding: 10px;
-    font-family: times new roman;
+    /* font-family: times new roman; */
     overflow: hidden;
 }
 

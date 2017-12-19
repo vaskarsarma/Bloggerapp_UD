@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   'body': {
-    'fontFamily': 'Arial, Helvetica, sans-serif',
+    // font-family: Arial, Helvetica, sans-serif;
     // font-size: 16px;
     'color': '#000000',
     'fontVariant': 'normal'
