@@ -25,8 +25,32 @@
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="content">Content</label>
-                    <div id="content" name="content">{{blogs.content}}</div>
+                  <div id="content" name="content">{{blogs.content}}</div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="prevblogid">Previous Blog</label>
+                  <div>
+                    <select name="prevblogid" id="prevblogid" class="form-control">
+                      {{#each blogslist}} {{#Compare ../blogs.prevblogid this._id}}
+                      <option selected="selected" value="{{this._id}}">{{this.topic}}</option>
+                      {{else}}
+                      <option value="{{this._id}}">{{this.topic}}</option>
+                      {{/Compare}} {{/each}}
+                    </select>
                   </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="nextblogid">Next Blog</label>
+                  <div>
+                    <select name="nextblogid" id="nextblogid" class="form-control">
+                      {{#each blogslist}} {{#Compare ../blogs.nextblogid this._id}}
+                      <option selected="selected" value="{{this._id}}">{{this.topic}}</option>
+                      {{else}}
+                      <option value="{{this._id}}">{{this.topic}}</option>
+                      {{/Compare}} {{/each}}
+                    </select>
+                  </div>
+                </div>
                 <div class="form-group">
                   <label class="control-label" for="category">Blog Category</label>
                   <div>
@@ -136,6 +160,30 @@
                       <textarea class="input" rows="10" cols="85" maxlength="5000" id="content_{{this._id}}" name="content_{{this._id}}" autofocus="autofocus">{{{this.content}}}</textarea> --}} {{!-- </div> --}}
                     <textarea class="hidden" maxlength="5000" id="txt_{{this._id}}" name="txt_{{this._id}}">{{this.content}}</textarea>
                     <div id="content_{{this._id}}" name="content_{{this._id}}" autofocus="autofocus"></div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="prevblogid_{{this._id}}">Previous Blog</label>
+                    <div>
+                      <select name="prevblogid_{{this._id}}" id="prevblogid_{{this._id}}" class="form-control">
+                        {{#each ../blogslist}} {{#Compare ../this.prevblogid this._id}}
+                        <option selected="selected" value="{{this._id}}">{{this.topic}}</option>
+                        {{else}}
+                        <option value="{{this._id}}">{{this.topic}}</option>
+                        {{/Compare}} {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="nextblogid_{{this._id}}">Next Blog</label>
+                    <div>
+                      <select name="nextblogid_{{this._id}}" id="nextblogid_{{this._id}}" class="form-control">
+                        {{#each ../blogslist}} {{#Compare ../this.nextblogid this._id}}
+                        <option selected="selected" value="{{this._id}}">{{this.topic}}</option>
+                        {{else}}
+                        <option value="{{this._id}}">{{this.topic}}</option>
+                        {{/Compare}} {{/each}}
+                      </select>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="category_{{this._id}}">Blog Category</label>

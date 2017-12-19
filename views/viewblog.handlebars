@@ -11,6 +11,12 @@
                 <span>{{{blog.content}}}</span>
             </div>
 
+            {{#Compare blog.prevblogid "!==" "0"}}
+            <a href="/viewblog/showdetails/{{blog.prevblogid}}">Previous</a>
+            {{/Compare}} {{#Compare blog.nextblogid "!==" "0"}}
+            <a href="/viewblog/showdetails/{{blog.nextblogid}}">Next</a>
+            {{/Compare}}
+
             <hr>
             <!-- Blog Comments - Comments Form -->
             <div class="panel panel-default">
@@ -26,14 +32,14 @@
                     </div>
                     <div class="blogcommentsection">
                         <form id="blogcommentfrm">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="4" name="blogcomment" id="blogcomment" required="required"></textarea>
-                            <input type="hidden" value="{{blog._id}}" name="blogid" id="blogid" />
-                            <input type="hidden" value="{{blog.topic}}" name="blogtopic" id="blogtopic" />
-                            <input type="hidden" id="uname" name="uname" value="{{user.username}}" />
-                            <input type="hidden" id="userid" name="userid" value="{{user._id}}" />
-                        </div>
-                        <button type="button" class="btn btn-info btn-sm addblogcomment">Submit</button>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="4" name="blogcomment" id="blogcomment" required="required"></textarea>
+                                <input type="hidden" value="{{blog._id}}" name="blogid" id="blogid" />
+                                <input type="hidden" value="{{blog.topic}}" name="blogtopic" id="blogtopic" />
+                                <input type="hidden" id="uname" name="uname" value="{{user.username}}" />
+                                <input type="hidden" id="userid" name="userid" value="{{user._id}}" />
+                            </div>
+                            <button type="button" class="btn btn-info btn-sm addblogcomment">Submit</button>
                         </form>
                     </div>
                     {{else}} Please
@@ -48,7 +54,7 @@
             <!-- Posted Comments -->
             <div class="commentpanel">
                 {{#if comments}} {{#Compare comments.count ">" 0}} {{#each comments.result}}
-               
+
                 <div class="panel panel-default">
                     <div class="panel-body">
                         {{this.comment}}
@@ -72,9 +78,7 @@
 
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <!-- Top Visited Side Widget Well -->
-            {{#if topvisit}} 
-                {{> topvisitblogs topvisit=topvisit }} 
-            {{/if}}
+            {{#if topvisit}} {{> topvisitblogs topvisit=topvisit }} {{/if}}
 
             <!-- Top Visited Side Widget Well -->
             {{#if mostrecentblogs}} {{> recentblogs mostrecentblogs=mostrecentblogs }} {{/if}}

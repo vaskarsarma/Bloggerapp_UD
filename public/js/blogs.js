@@ -117,6 +117,8 @@ $(function() {
         var topic = $("#topic").val();
         //var content = CKEDITOR.instances['content'].getData();
         var content = $("#content").summernote('code');
+        var prevblogid = $("#prevblogid").val();
+        var nextblogid = $("#nextblogid").val();
         var category = $("#category").val();
 
         if (topic.trim() == "" || topic == undefined) {
@@ -141,7 +143,7 @@ $(function() {
             );
             $("#content").focus();
         } else {
-            content = "<p>" + content + "</p>";
+            content = content;
         }
 
         var data = {};
@@ -149,6 +151,8 @@ $(function() {
             "topic": topic,
             "content": content,
             "category": category,
+            "prevblogid": prevblogid,
+            "nextblogid": nextblogid,
             "userid": userid,
             "createdby": createdby
         }
@@ -212,6 +216,8 @@ $(function() {
         var topic = $("#topic_" + _id).val();
         //var content = CKEDITOR.instances['content_' + _id].getData();
         var content = $('#content_' + _id).summernote('code');
+        var prevblogid = $("#prevblogid_" + _id).val();
+        var nextblogid = $("#nextblogid_" + _id).val();
         var category = $("#category_" + _id).val();
         var creationdate = $("#creationdate_" + _id).val();
 
@@ -244,6 +250,8 @@ $(function() {
             "_id": _id,
             "topic": topic,
             "content": content,
+            "prevblogid": prevblogid,
+            "nextblogid": nextblogid,
             "category": category,
             "modifiedby": modifiedby,
             "index": index,
@@ -557,7 +565,7 @@ let GetBlogsByUserID = (lastblogid, userid, actiontype) => {
     $.when(GetCompiledTemplate("blogsectionbyuserid"), GetBlogsBySIandUserID(lastblogid, userid))
         .done(function(template, json) {
 
-            var data = { "lastblogid": json.lastblogid, "category": json.category, "blogs": json.blogs };
+            var data = { "lastblogid": json.lastblogid, "category": json.category, "blogs": json.blogs, "blogslist": json.blogslist };
             var compiledTemplate = Handlebars.compile(template);
             var newhtml = compiledTemplate(data);
 
@@ -567,8 +575,6 @@ let GetBlogsByUserID = (lastblogid, userid, actiontype) => {
                 $("#accordion").append(newhtml);
 
             $("#accordion").accordion("refresh");
-
-            console.log(JSON.stringify(data));
 
             lastblogid = json.lastblogid;
 

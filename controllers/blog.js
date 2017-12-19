@@ -15,12 +15,14 @@ router.get('/profile/:_id', function(req, res) {
 
     var blogs = {};
     var userid = req.params._id;
-    // console.log("current user:" + req.user._id);
-    // console.log("requested user id:" + userid);
-    if (userid == req.session.user._id) {
-        blogger.blogsbyuserid(userid, "0").then(function(response) {
 
-            blogs = response.data;
+    if (userid == req.session.user._id) {
+        Promise.all([
+            blogger.blogsbyuserid(userid, "0"),
+            blogger.blogsnamebyuserid(userid)
+        ]).then(data => {
+            var blogs = data[0].data;
+            var blogslist = data[1].data;
 
             log.logger.info("Blogger Page : retrieve blogs : blogs count " + blogs.count);
 
@@ -29,10 +31,13 @@ router.get('/profile/:_id', function(req, res) {
                 lastblogid = result._id
             });
 
-            //console.log("Blogger Page :lastblogid " + lastblogid);
-
-            res.render('blogs', { title: 'Blogs', category: categoryList, blogs: blogs, lastblogid: lastblogid });
-
+            res.render('blogs', {
+                title: 'Blogs',
+                category: categoryList,
+                blogs: blogs,
+                lastblogid: lastblogid,
+                blogslist: blogslist.result
+            });
         }).catch(function(err) {
             res.status(500).send();
         });
@@ -44,35 +49,44 @@ router.get('/profile/:_id', function(req, res) {
 router.post('/profile', function(req, res) {
 
     var blogs = {};
+    var blogslist = {};
     var lcid = req.body.lastblogid;
     var userid = req.body.userid;
 
-    blogger.blogsbyuserid(userid, lcid).then(function(response) {
+    if (userid == req.session.user._id) {
+        Promise.all([
+            blogger.blogsbyuserid(userid, lcid),
+            blogger.blogsnamebyuserid(userid)
+        ]).then(data => {
+            blogs = data[0].data;
+            blogslist = data[1].data;
 
-        //console.log("route 4 " + req.body.userid + " , " + req.body.lcid);
+            console.log(JSON.stringify(blogslist));
 
-        blogs = response.data;
+            log.logger.info("Blogger Page : retrieve blogs : blogs count " + blogs.count);
 
-        log.logger.info("Blogger Page : retrieve blogs : blogs count " + blogs.count);
+            var lastblogid = "0";
+            _.forEach(blogs.result, function(result) {
+                lastblogid = result._id
+            });
 
-        var lastblogid = "0";
-        _.forEach(blogs.result, function(result) {
-            //console.log(1);
-            lastblogid = result._id
+            var data = {};
+            data = {
+                "category": categoryList,
+                "blogs": blogs,
+                "lastblogid": lastblogid,
+                "blogslist": blogslist.result
+            };
+            res.json(data);
+        }).catch(function(err) {
+            blogs = { "result": [], "count": 0 };
+            blogslist={ "result": [], "count": 0 };
+            data = { "category": categoryList, "blogs": blogs, "lastblogid": lcid,"blogslist": blogslist.result };
+            res.json(data);
         });
-
-        //console.log("Blogger Page post : retrieve blogs : blogs count " + blogs.count + " , lastblogid : " + lastblogid);
-
-        var data = {};
-        data = { "category": categoryList, "blogs": blogs, "lastblogid": lastblogid };
-        res.json(data);
-    }).catch(function(err) {
-        console.log(err);
-        blogs = { "result": [], "count": 0 };
-        data = { "category": categoryList, "blogs": blogs, "lastblogid": lcid };
-
-        res.json(data);
-    });
+    } else {
+        res.redirect('/');
+    }
 });
 
 //================== add blog =================
@@ -82,6 +96,8 @@ router.post("/savedata/add", function(req, res) {
         var topic = req.body.topic;
         var content = req.body.content;
         var category = req.body.category;
+        var prevblogid = req.body.prevblogid;
+        var nextblogid = req.body.nextblogid;
         var userid = req.body.userid;
         var createdby = req.body.createdby;
 
@@ -93,7 +109,9 @@ router.post("/savedata/add", function(req, res) {
                 "content": content,
                 "category": category,
                 "userid": userid,
-                "createdby": createdby
+                "createdby": createdby,
+                "prevblogid": prevblogid,
+                "nextblogid": nextblogid
             }
 
             blogger.addblog(data).then(function(results) {
@@ -123,6 +141,8 @@ router.post("/savedata/edit", function(req, res) {
         var topic = req.body.topic;
         var content = req.body.content;
         var category = req.body.category;
+        var prevblogid = req.body.prevblogid;
+        var nextblogid = req.body.nextblogid;        
         var userid = req.body.userid;
         var createdby = req.body.createdby;
 
@@ -134,6 +154,8 @@ router.post("/savedata/edit", function(req, res) {
                 "topic": topic,
                 "content": content,
                 "categorykey": category,
+                "prevblogid": prevblogid,
+                "nextblogid": nextblogid,                
                 "userid": userid
             }
 
