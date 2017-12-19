@@ -507,5 +507,58 @@ export default StyleSheet.create({
   'side-item:hover side-image img': {
     'WebkitTransform': 'scale(1.2)',
     'transform': 'scale(1.2)'
+  },
+  'blog-panel': {
+    'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
+    'width': [{ 'unit': '%H', 'value': 1 }],
+    'background': '#fff',
+    'marginBottom': [{ 'unit': 'px', 'value': 20 }],
+    'verticalAlign': 'top',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ccc' }],
+    'borderRadius': '.3rem',
+    'overflow': 'hidden',
+    // margin: 0px 37px 30px 36px;
+    'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19)' }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.23)' }],
+    'columnGap': [{ 'unit': 'px', 'value': 20 }]
+  },
+  'panelpanel-default': {
+    'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
+    'width': [{ 'unit': '%H', 'value': 1 }],
+    'background': '#fff',
+    'marginBottom': [{ 'unit': 'px', 'value': 20 }],
+    'verticalAlign': 'top',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ccc' }],
+    'borderRadius': '.3rem',
+    'overflow': 'hidden',
+    // margin: 0px 37px 30px 36px;
+    'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19)' }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.19),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'string', 'value': 'rgba(0, 0, 0, 0.23)' }],
+    'columnGap': [{ 'unit': 'px', 'value': 20 }]
+  },
+  // User comments section
+  'avatar-image-container': {
+    'float': 'left',
+    'maxHeight': [{ 'unit': 'px', 'value': 50 }],
+    'overflow': 'hidden',
+    'width': [{ 'unit': 'px', 'value': 50 }]
+  },
+  'imgavatarImage': {
+    'borderRadius': '50%',
+    'width': [{ 'unit': 'px', 'value': 50 }],
+    'height': [{ 'unit': 'px', 'value': 50 }],
+    'maxWidth': [{ 'unit': 'px', 'value': 50 }],
+    'maxHeight': [{ 'unit': 'px', 'value': 50 }]
+  },
+  'divcomment-block': {
+    'marginLeft': [{ 'unit': 'px', 'value': 80 }],
+    'position': 'relative'
+  },
+  'acitaUser': {
+    'display': 'block',
+    'fontSize': [{ 'unit': 'px', 'value': 14 }],
+    'textTransform': 'uppercase',
+    'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
+    'marginBottom': [{ 'unit': 'px', 'value': 6 }],
+    'color': '#333',
+    'fontFamily': '"Open Sans"'
   }
 });
