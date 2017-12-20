@@ -103,7 +103,7 @@ export default StyleSheet.create({
   'close': {
     'cursor': 'pointer',
     // background: transparent;
-    'color': '#fa8217 !important',
+    'color': '#099cec !important',
     'border': [{ 'unit': 'px', 'value': 0 }],
     'WebkitAppearance': 'none',
     // font-family: 'Glyphicons Halflings' !important;
@@ -267,7 +267,7 @@ export default StyleSheet.create({
     'textTransform': 'uppercase',
     'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
     'color': '#5d5d5d',
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#ccc' }],
     'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
     'fontSize': [{ 'unit': 'px', 'value': 10 }],
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }],
@@ -320,7 +320,7 @@ export default StyleSheet.create({
   'bottom-blog': {
     'display': 'inline-block',
     'width': [{ 'unit': '%H', 'value': 1 }],
-    'borderTop': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'borderTop': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#999' }],
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
     'marginTop': [{ 'unit': 'px', 'value': 30 }],
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
@@ -342,7 +342,7 @@ export default StyleSheet.create({
   },
   'blog-date li fa': {
     'fontSize': [{ 'unit': 'px', 'value': 16 }],
-    'color': '#fb8217',
+    'color': '#099cec',
     'marginRight': [{ 'unit': 'px', 'value': 10 }],
     'verticalAlign': 'middle'
   },
@@ -356,7 +356,7 @@ export default StyleSheet.create({
     'lineHeight': [{ 'unit': 'px', 'value': 27 }],
     'textAlign': 'center',
     'fontSize': [{ 'unit': 'px', 'value': 13 }],
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#099cec' }],
     'WebkitBorderRadius': '50%',
     'MozBorderRadius': '50%',
     'MsBorderRadius': '50%',
@@ -366,7 +366,7 @@ export default StyleSheet.create({
   },
   'a': {
     'textDecoration': 'none',
-    'color': '#fb8217'
+    'color': '#099cec'
   },
   'a': {
     'color': '#646464'
@@ -381,7 +381,7 @@ export default StyleSheet.create({
     'opacity': '.2'
   },
   'spanglyphicon': {
-    'color': '#fb8217'
+    'color': '#777'
   },
   // body {
     background-image: url('/images/background.png');    
@@ -426,7 +426,7 @@ export default StyleSheet.create({
     'textTransform': 'uppercase',
     'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
     'color': '#ffffff',
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#099cec' }],
     'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
     'fontSize': [{ 'unit': 'px', 'value': 10 }],
     // font-family: 'Montserrat';
@@ -434,7 +434,7 @@ export default StyleSheet.create({
     'display': 'inline-block',
     'textAlign': 'center',
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 12 }],
-    'backgroundColor': '#fb8217',
+    'backgroundColor': '#099cec',
     'fontWeight': 'bold',
     'fontSize': [{ 'unit': 'px', 'value': 14 }],
     'textDecoration': 'none'
@@ -473,17 +473,18 @@ export default StyleSheet.create({
   },
   'h2headertext span': {
     // font-family: 'Montserrat';
-    'fontSize': [{ 'unit': 'px', 'value': 12 }],
+    'fontSize': [{ 'unit': 'px', 'value': 17 }],
     'textTransform': 'uppercase',
     'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
     'color': '#333',
     'lineHeight': [{ 'unit': 'px', 'value': 27 }],
-    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 20 }],
-    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'padding': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'px', 'value': 18 }, { 'unit': 'px', 'value': 2 }, { 'unit': 'px', 'value': 18 }],
+    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
     'display': 'inline-block',
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 0 }],
     'background': '#ffffff',
-    'position': 'relative'
+    'position': 'relative',
+    'borderRadius': '6px'
   },
   'h2headertext': {
     'position': 'relative',
@@ -496,7 +497,7 @@ export default StyleSheet.create({
     'width': [{ 'unit': '%H', 'value': 1 }],
     'height': [{ 'unit': 'px', 'value': 1 }],
     'top': [{ 'unit': '%V', 'value': 0.49 }],
-    'borderBottom': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#fb8217' }],
+    'borderBottom': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
     'position': 'absolute',
     'left': [{ 'unit': 'px', 'value': 0 }]
   },
@@ -585,10 +586,10 @@ export default StyleSheet.create({
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
   },
   'h4nextLink': {
-    'color': '#fb8217'
+    'color': '#099cec'
   },
   'h4previousLink': {
-    'color': '#fb8217'
+    'color': '#099cec'
   },
   'citeuser': {
     'fontStyle': 'normal',

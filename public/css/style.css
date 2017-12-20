@@ -12,12 +12,13 @@ h2 {
 .btn {
     border: 0;
     border-radius: 0;
-    background-color: #fa8217;
+    background-color: #099cec;
     color: #fff;
+    border-radius: 4px !important;
 }
 
 .btn:hover {
-    background-color: #e26b02;
+    background-color: #099cec;
     color: #fff;
 }
 
@@ -81,7 +82,7 @@ h2 {
 .navbar-default .navbar-nav>.s-active>a,
 .navbar-default .navbar-nav>.s-active>a:focus,
 .navbar-default .navbar-nav>.s-active>a:hover {
-    color: #fa8217;
+    color: #099cec;
     background-color: transparent;
 }
 
@@ -102,13 +103,13 @@ h2 {
 }
 
 .caret {
-    color: #fa8217;
+    color: #099cec;
 }
 
 .username {
     background-color: transparent;
     border: 0;
-    color: #fa8217;
+    color: #099cec;
     text-transform: uppercase;
 }
 
@@ -129,7 +130,7 @@ h2 {
 
 .userdropdown li a:hover {
     background-color: transparent;
-    color: #fa8217;
+    color: #099cec;
 }
 
 .modal-header {
@@ -149,7 +150,7 @@ h2 {
 }
 
 .modal-title {
-    color: #fa8217;
+    color: #099cec;
     text-align: center;
     font-size: 25px;
     padding: 10px 0 0 0;
@@ -170,13 +171,13 @@ h2 {
 }
 
 .modal-links-left p a {
-    color: #fa8217;
+    color: #099cec;
     font-weight: bold;
     text-decoration: underline;
 }
 
 .modal-links-left p a:hover {
-    color: #e26b02;
+    color: #099cec;
 }
 
 .modal-links-right {
@@ -201,17 +202,17 @@ h2 {
 }
 
 .btn-subscribe {
-    text-align: left;
     padding-left: 20px;
     color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
     width: 143px;
     height: 35px;
-    background-image: url("../images/subscribe-bg.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
+    /* background-image: url(../images/subscribe-bg.jpg); */
+    /* background-position: top center; */
+    /* background-repeat: no-repeat; */
     border: 0px;
+    border-radius: 4px;
 }
 
 .btn-subscribe:hover {
@@ -220,7 +221,7 @@ h2 {
 }
 
 .btn-subscribe:focus {
-    background-image: url("../images/subscribe-bg.jpg");
+    /* background-image: url("../images/subscribe-bg.jpg"); */
     background-position: top center;
     background-repeat: no-repeat;
     border: 0;
@@ -281,7 +282,7 @@ h2 {
 }
 
 .blogCategory-box a {
-    color: #ff6800;
+    color: #099cec;
     font-size: 16px;
     font-weight: bold;
     margin: 0;
@@ -328,7 +329,7 @@ h2 {
 }
 
 .footer-link li a:hover {
-    color: #fa8217;
+    color: #099cec;
 }
 
 .footer-text {
@@ -435,7 +436,7 @@ h2 {
     width: 100%;
     text-align: center;
     float: left;
-    color: #fa8217;
+    color: #099cec;
 }
 
 .user-progress {

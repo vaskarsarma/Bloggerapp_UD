@@ -13,11 +13,12 @@ export default StyleSheet.create({
   'btn': {
     'border': [{ 'unit': 'px', 'value': 0 }],
     'borderRadius': '0',
-    'backgroundColor': '#fa8217',
-    'color': '#fff'
+    'backgroundColor': '#099cec',
+    'color': '#fff',
+    'borderRadius': '4px !important'
   },
   'btn:hover': {
-    'backgroundColor': '#e26b02',
+    'backgroundColor': '#099cec',
     'color': '#fff'
   },
   'banner': {
@@ -75,15 +76,15 @@ export default StyleSheet.create({
     'backgroundColor': 'transparent'
   },
   'navbar-default navbar-nav>s-active>a': {
-    'color': '#fa8217',
+    'color': '#099cec',
     'backgroundColor': 'transparent'
   },
   'navbar-default navbar-nav>s-active>a:focus': {
-    'color': '#fa8217',
+    'color': '#099cec',
     'backgroundColor': 'transparent'
   },
   'navbar-default navbar-nav>s-active>a:hover': {
-    'color': '#fa8217',
+    'color': '#099cec',
     'backgroundColor': 'transparent'
   },
   'navbar-default navbar-collapse': {
@@ -100,12 +101,12 @@ export default StyleSheet.create({
     'border': [{ 'unit': 'px', 'value': 0 }]
   },
   'caret': {
-    'color': '#fa8217'
+    'color': '#099cec'
   },
   'username': {
     'backgroundColor': 'transparent',
     'border': [{ 'unit': 'px', 'value': 0 }],
-    'color': '#fa8217',
+    'color': '#099cec',
     'textTransform': 'uppercase'
   },
   'userdropdown ul': {
@@ -123,7 +124,7 @@ export default StyleSheet.create({
   },
   'userdropdown li a:hover': {
     'backgroundColor': 'transparent',
-    'color': '#fa8217'
+    'color': '#099cec'
   },
   'modal-header': {
     'border': [{ 'unit': 'px', 'value': 0 }],
@@ -139,7 +140,7 @@ export default StyleSheet.create({
     'borderRadius': '0'
   },
   'modal-title': {
-    'color': '#fa8217',
+    'color': '#099cec',
     'textAlign': 'center',
     'fontSize': [{ 'unit': 'px', 'value': 25 }],
     'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
@@ -156,12 +157,12 @@ export default StyleSheet.create({
     'color': '#000'
   },
   'modal-links-left p a': {
-    'color': '#fa8217',
+    'color': '#099cec',
     'fontWeight': 'bold',
     'textDecoration': 'underline'
   },
   'modal-links-left p a:hover': {
-    'color': '#e26b02'
+    'color': '#099cec'
   },
   'modal-links-right': {
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
@@ -182,24 +183,24 @@ export default StyleSheet.create({
     'textAlign': 'right'
   },
   'btn-subscribe': {
-    'textAlign': 'left',
     'paddingLeft': [{ 'unit': 'px', 'value': 20 }],
     'color': '#ffffff',
     'fontSize': [{ 'unit': 'px', 'value': 14 }],
     'textTransform': 'uppercase',
     'width': [{ 'unit': 'px', 'value': 143 }],
     'height': [{ 'unit': 'px', 'value': 35 }],
-    'backgroundImage': 'url("../images/subscribe-bg.jpg")',
-    'backgroundPosition': 'top center',
-    'backgroundRepeat': 'no-repeat',
-    'border': [{ 'unit': 'px', 'value': 0 }]
+    // background-image: url(../images/subscribe-bg.jpg);
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    'border': [{ 'unit': 'px', 'value': 0 }],
+    'borderRadius': '4px'
   },
   'btn-subscribe:hover': {
     'color': '#7b3d06',
     'border': [{ 'unit': 'px', 'value': 0 }]
   },
   'btn-subscribe:focus': {
-    'backgroundImage': 'url("../images/subscribe-bg.jpg")',
+    // background-image: url("../images/subscribe-bg.jpg");
     'backgroundPosition': 'top center',
     'backgroundRepeat': 'no-repeat',
     'border': [{ 'unit': 'px', 'value': 0 }]
@@ -249,7 +250,7 @@ export default StyleSheet.create({
     'textTransform': 'uppercase'
   },
   'blogCategory-box a': {
-    'color': '#ff6800',
+    'color': '#099cec',
     'fontSize': [{ 'unit': 'px', 'value': 16 }],
     'fontWeight': 'bold',
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
@@ -288,7 +289,7 @@ export default StyleSheet.create({
     'color': '#fff'
   },
   'footer-link li a:hover': {
-    'color': '#fa8217'
+    'color': '#099cec'
   },
   'footer-text': {
     'height': [{ 'unit': 'string', 'value': 'auto' }],
@@ -379,7 +380,7 @@ export default StyleSheet.create({
     'width': [{ 'unit': '%H', 'value': 1 }],
     'textAlign': 'center',
     'float': 'left',
-    'color': '#fa8217'
+    'color': '#099cec'
   },
   'user-progress': {
     'width': [{ 'unit': '%H', 'value': 1 }],

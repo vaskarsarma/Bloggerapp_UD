@@ -1,159 +1,194 @@
-body { 
-     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-     font-size: 16px;
-     color: #000000;
-     font-variant: normal;
+body {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    font-variant: normal;
 }
-.banner{
-	min-height: 400px;
-	background-color: #313843;
-	background: url("../images/banner.jpg") no-repeat center top;
-	}
-.navbar{
-	margin-top: 15px;
-	border: 0;
-	background-color: transparent;
-	background-image: url("../images/nav-bg.png");
-	background-position:center bottom;
-	background-repeat: no-repeat; 
+
+.banner {
+    min-height: 400px;
+    background-color: #313843;
+    background: url("../images/banner.jpg") no-repeat center top;
 }
-.navbar-brand{
-	margin: 0 0 0 20px;
+
+.navbar {
+    margin-top: 15px;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/nav-bg.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
-.nav.navbar-nav{
-	text-transform: uppercase;
-	font-size: 18px;
-	float: right;
-	margin: 0 20px 0 0;
+
+.navbar-brand {
+    margin: 0 0 0 20px;
 }
+
+.nav.navbar-nav {
+    text-transform: uppercase;
+    font-size: 18px;
+    float: right;
+    margin: 0 20px 0 0;
+}
+
 .navbar-nav>li>a {
     color: #b8b8ba;
     padding: 35px 15px 0 15px;
     line-height: 0;
 }
+
 .navbar-default .navbar-nav>li>a:hover {
     color: #ffffff;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
     color: #ffffff;
     background-color: transparent;
 }
-.navbar-default .navbar-nav>.s-active>a, .navbar-default .navbar-nav>.s-active>a:focus, .navbar-default .navbar-nav>.s-active>a:hover {
-    color: #fa8217;
+
+.navbar-default .navbar-nav>.s-active>a,
+.navbar-default .navbar-nav>.s-active>a:focus,
+.navbar-default .navbar-nav>.s-active>a:hover {
+    color: #099cec;
     background-color: transparent;
 }
-.navbar-default .navbar-collapse{
-	border: 0;
+
+.navbar-default .navbar-collapse {
+    border: 0;
 }
-.subscribe{
-	width: 90%;
-	margin: auto;
-	padding: 20px 0 0 0;
-	text-align: right;
+
+.subscribe {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0 0 0;
+    text-align: right;
 }
-.btn-subscribe{
-	text-align: left;
-	padding-left: 20px;
-	color: #ffffff;
-	font-size: 15px;
-	text-transform: uppercase;
-	width: 143px;
-	height: 35px;
-	background-image: url("../images/subscribe-bg.jpg");
-	background-position: top center;
-	background-repeat: no-repeat;
-	border: 0px;
+
+.btn-subscribe {
+    text-align: left;
+    padding-left: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 143px;
+    height: 35px;
+    /* background-image: url("../images/subscribe-bg.jpg"); */
+    background-position: top center;
+    background-repeat: no-repeat;
+    border: 0px;
 }
-.btn-subscribe:hover{
-	color: #7b3d06;
-	border: 0px;
+
+.btn-subscribe:hover {
+    color: #7b3d06;
+    border: 0px;
 }
-.btn-subscribe:focus{
-	background-image: url("../images/subscribe-bg.jpg");
-	background-position: top center;
-	background-repeat: no-repeat;
-	border: 0;
+
+.btn-subscribe:focus {
+    /* background-image: url("../images/subscribe-bg.jpg"); */
+    background-position: top center;
+    background-repeat: no-repeat;
+    border: 0;
 }
-.my-container{
-	width: 90%;
-	margin: auto;
-	padding: 0;
-	height: auto;
-	overflow: hidden;
+
+.my-container {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
 }
-.my-column{
-	padding: 0px;
+
+.my-column {
+    padding: 0px;
 }
-.blogCategory-heading h1{
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-	font-size: 50px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	color: #807e7e;
+
+.blogCategory-heading h1 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    color: #807e7e;
 }
-.blogCategory-heading{
-	text-align: center;
-	width: 75%;
-	margin: auto;
-	padding-bottom: 20px;
+
+.blogCategory-heading {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 20px;
 }
-.blogCategory-heading h1{
-	margin-bottom: 20px;
+
+.blogCategory-heading h1 {
+    margin-bottom: 20px;
 }
-.blogCategory-box{
-	text-align: center;
-	padding: 15px 30px 15px 30px;
+
+.blogCategory-box {
+    text-align: center;
+    padding: 15px 30px 15px 30px;
 }
-.blogCategory-box p{
-	text-align: left;
+
+.blogCategory-box p {
+    text-align: left;
 }
-.blogCategory-box h2{
-	color: #474747;
-	font-size: 24px;
-	text-transform: uppercase;
+
+.blogCategory-box h2 {
+    color: #474747;
+    font-size: 24px;
+    text-transform: uppercase;
 }
-.blogCategory-box a{
-	color: #ff6800;
-	font-size: 16px;
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
+
+.blogCategory-box a {
+    color: #099cec;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
+
+
 /*Footer*/
-.footer{
-	height: auto;
-	overflow: hidden;
-	background-color: #403c37;
-	padding: 20px 0 10px 0;
+
+.footer {
+    height: auto;
+    overflow: hidden;
+    background-color: #403c37;
+    padding: 20px 0 10px 0;
 }
-.footer-logo{
-	height: auto;
-	overflow: hidden;
-	text-align: center;
+
+.footer-logo {
+    height: auto;
+    overflow: hidden;
+    text-align: center;
 }
-.footer-link{
-	height: auto;
-	overflow: hidden;
-	text-align: center;
+
+.footer-link {
+    height: auto;
+    overflow: hidden;
+    text-align: center;
 }
-.footer ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
-.footer ul li{
-	float: left;
+
+.footer ul li {
+    float: left;
 }
-.footer li a{
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	padding: 0 20px;
-	color: #fff;
+
+.footer li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
 }
-.footer-text{
-	text-align: center;
-	color: #fff;
+
+.footer-text {
+    text-align: center;
+    color: #fff;
 }
