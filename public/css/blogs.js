@@ -73,7 +73,24 @@ span.glyphicon.glyphicon-remove {
   'buttonnote-btnbtnbtn-defaultbtn-sm': {
     'BACKGROUNDCOLOR': 'BLACK'
   },
-  // .viewbloglinks a{
-color: #099cec;
+  'ulside-newsfeed': {
+    'margin': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 33 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'side-newsfeed lirecent-blog': {
+    // text-align: center;
+    'backgroundColor': '#F7F7F7',
+    'marginBottom': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'string', 'value': '!important' }],
+    'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
+    'borderRadius': '6px',
+    'wordWrap': 'break-word'
+  },
+  // .recent-Blogs .headertext:before {
+    content: "\A";
+    width: 100%;
+    height: 1px;
+    top: 87%;
+    border-bottom: 1px dashed #ccc;
+    position: absolute;
+    left: 0;
 }
 });

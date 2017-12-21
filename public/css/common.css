@@ -704,4 +704,9 @@ ul.site-social-networks.secondary-2-primary.style-default.show-title {
     padding: 8px 10px;
     text-transform: uppercase;
     transition: all .6s;
+    text-decoration: none;
+}
+
+div.clear {
+    clear: both;
 }

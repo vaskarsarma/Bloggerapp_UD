@@ -662,6 +662,10 @@ export default StyleSheet.create({
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
     'padding': [{ 'unit': 'px', 'value': 8 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 8 }, { 'unit': 'px', 'value': 10 }],
     'textTransform': 'uppercase',
-    'transition': 'all .6s'
+    'transition': 'all .6s',
+    'textDecoration': 'none'
+  },
+  'divclear': {
+    'clear': 'both'
   }
 });
