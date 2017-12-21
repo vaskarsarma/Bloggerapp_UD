@@ -1,9 +1,22 @@
 <!-- Recent blogs Widget Well -->
-{{#Compare topvisit.count ">" 0}}
+{{!-- {{#Compare topvisit.count ">" 0}}
 <div class="list-group">
-  <h4 class="list-group-item active">Top Visit</h4>
+    <h4 class="list-group-item active">Top Visit</h4>
     {{#each topvisit.result}}
-        <a class="list-group-item" href="/viewblog/showdetails/{{this.blogid}}">{{this.blogtopic}}</a> 
+    <a class="list-group-item" href="/viewblog/showdetails/{{this.blogid}}">{{this.blogtopic}}</a>
     {{/each}}
+</div>
+{{/Compare}} --}} {{#Compare topvisit.count ">" 0}}
+<div class="recent-Blogs viewBlogCart">
+    <h2 class="headertext">
+        <span>recent posts</span>
+    </h2>
+    <ul class="side-newsfeed">
+        {{#each topvisit.result}}
+        <li class="recent-blog">
+            <a href="/viewblog/showdetails/{{this.blogid}}">{{this.blogtopic}}</a>
+        </li>
+        {{/each}}
+    </ul>
 </div>
 {{/Compare}}
