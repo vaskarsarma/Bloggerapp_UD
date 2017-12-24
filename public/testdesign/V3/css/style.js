@@ -83,10 +83,10 @@ export default StyleSheet.create({
     'backgroundRepeat': 'no-repeat',
     'border': [{ 'unit': 'px', 'value': 0 }]
   },
-  'btn-subscribe:hover': {
-    'color': '#7b3d06',
-    'border': [{ 'unit': 'px', 'value': 0 }]
-  },
+  // .btn-subscribe:hover {
+    color: #7b3d06;
+    border: 0px;
+}
   'btn-subscribe:focus': {
     // background-image: url("../images/subscribe-bg.jpg");
     'backgroundPosition': 'top center',

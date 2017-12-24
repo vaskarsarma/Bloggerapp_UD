@@ -85,18 +85,19 @@ export default StyleSheet.create({
     'textDecoration': 'none',
     'margin': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 2 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 2 }]
   },
-  'fa-facebook': {
-    'background': '#3B5998',
-    'color': 'white'
-  },
-  'fa-twitter': {
-    'background': '#55ACEE',
-    'color': 'white'
-  },
-  'fa-google': {
-    'background': '#dd4b39',
-    'color': 'white'
-  },
+  // .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  // .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
   'fa:hover': {
     'opacity': '0.7'
   },
@@ -419,14 +420,14 @@ export default StyleSheet.create({
   'imgimgPostImage': {
     'width': [{ 'unit': '%H', 'value': 0.6 }],
     'display': 'block',
-    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }]
+    'margin': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 5 }, { 'unit': 'string', 'value': 'auto' }]
   },
   'aloadmore': {
     'borderRadius': '1px',
     'textTransform': 'uppercase',
     'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
     'color': '#ffffff',
-    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#099cec' }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#555' }],
     'letterSpacing': [{ 'unit': 'px', 'value': 2 }],
     'fontSize': [{ 'unit': 'px', 'value': 10 }],
     // font-family: 'Montserrat';
@@ -434,10 +435,11 @@ export default StyleSheet.create({
     'display': 'inline-block',
     'textAlign': 'center',
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 12 }],
-    'backgroundColor': '#099cec',
+    'backgroundColor': '#555',
     'fontWeight': 'bold',
     'fontSize': [{ 'unit': 'px', 'value': 14 }],
-    'textDecoration': 'none'
+    'textDecoration': 'none',
+    'borderRadius': '4px'
   },
   'side-item': {
     'overflow': 'hidden',
@@ -479,7 +481,7 @@ export default StyleSheet.create({
     'color': '#333',
     'lineHeight': [{ 'unit': 'px', 'value': 27 }],
     'padding': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'px', 'value': 18 }, { 'unit': 'px', 'value': 2 }, { 'unit': 'px', 'value': 18 }],
-    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
     'display': 'inline-block',
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 6 }, { 'unit': 'px', 'value': 0 }],
     'background': '#ffffff',
@@ -490,14 +492,15 @@ export default StyleSheet.create({
     'position': 'relative',
     'textAlign': 'center',
     // font-family: "Open Sans", sans-serif;
-    'fontWeight': 'normal'
+    'fontWeight': 'normal',
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
   },
   'headertext:before': {
     'content': '"\A"',
     'width': [{ 'unit': '%H', 'value': 1 }],
     'height': [{ 'unit': 'px', 'value': 1 }],
     'top': [{ 'unit': '%V', 'value': 0.49 }],
-    'borderBottom': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
+    'borderBottom': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'dashed' }, { 'unit': 'string', 'value': '#ccc' }],
     'position': 'absolute',
     'left': [{ 'unit': 'px', 'value': 0 }]
   },
@@ -510,7 +513,7 @@ export default StyleSheet.create({
     'transform': 'scale(1.2)'
   },
   'blog-panel': {
-    'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 25 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 25 }],
     'width': [{ 'unit': '%H', 'value': 1 }],
     'background': '#fff',
     'marginBottom': [{ 'unit': 'px', 'value': 20 }],
@@ -586,10 +589,10 @@ export default StyleSheet.create({
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
   },
   'h4nextLink': {
-    'color': '#099cec'
+    'color': '#555'
   },
   'h4previousLink': {
-    'color': '#099cec'
+    'color': '#555'
   },
   'citeuser': {
     'fontStyle': 'normal',
@@ -599,5 +602,70 @@ export default StyleSheet.create({
   },
   'spandatetimesecondary-text': {
     'marginLeft': [{ 'unit': '%H', 'value': 0.55 }]
+  },
+  'blog-panel h2': {
+    'textAlign': 'center'
+  },
+  'site-social-networks li': {
+    'textAlign': 'center',
+    'width': [{ 'unit': '%H', 'value': 0.322222 }],
+    'backgroundColor': '#F7F7F7',
+    'marginBottom': [{ 'unit': 'px', 'value': 3 }],
+    'paddingBottom': [{ 'unit': 'px', 'value': 7 }],
+    'display': 'inline-block',
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'site-social-networks a': {
+    'margin': [{ 'unit': 'px', 'value': 20 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }],
+    'textTransform': 'uppercase',
+    'fontSize': [{ 'unit': 'px', 'value': 10 }]
+  },
+  'site-social-networks ifa': {
+    'width': [{ 'unit': 'px', 'value': 32 }],
+    'height': [{ 'unit': 'px', 'value': 32 }],
+    'margin': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'string', 'value': 'auto' }],
+    'lineHeight': [{ 'unit': 'px', 'value': 32 }],
+    'textAlign': 'center',
+    'fontSize': [{ 'unit': 'px', 'value': 20 }],
+    'color': '#444',
+    'display': 'block',
+    'padding': [{ 'unit': 'px', 'value': 4 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'ulsite-social-networkssecondary-2-primarystyle-defaultshow-title': {
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'widget-content': {
+    'marginTop': [{ 'unit': 'px', 'value': 10 }],
+    'marginBottom': [{ 'unit': 'px', 'value': 10 }]
+  },
+  'viewBlogCart-first': {
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'viewBlogCart': {
+    'margin': [{ 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 0 }]
+  },
+  'categories spanlabel-size': {
+    'display': 'inline-block',
+    'float': 'left',
+    'fontSize': [{ 'unit': 'px', 'value': 11 }],
+    'lineHeight': [{ 'unit': 'string', 'value': 'normal' }],
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 0 }],
+    'opacity': '1'
+  },
+  'categories acategoryLabel': {
+    'background': '#f7f7f7',
+    'color': '#333',
+    'float': 'left',
+    'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#f7f7f7' }],
+    'fontFamily': ''Open Sans', sans-serif',
+    'lineHeight': [{ 'unit': '%V', 'value': 1 }],
+    'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'padding': [{ 'unit': 'px', 'value': 8 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 8 }, { 'unit': 'px', 'value': 10 }],
+    'textTransform': 'uppercase',
+    'transition': 'all .6s',
+    'textDecoration': 'none'
+  },
+  'divclear': {
+    'clear': 'both'
   }
 });

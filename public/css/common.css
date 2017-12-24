@@ -101,12 +101,14 @@ input {
     margin: 5px 2px;
 }
 
-.fa-facebook {
+
+/* .fa-facebook {
     background: #3B5998;
     color: white;
-}
+} */
 
-.fa-twitter {
+
+/* .fa-twitter {
     background: #55ACEE;
     color: white;
 }
@@ -114,7 +116,7 @@ input {
 .fa-google {
     background: #dd4b39;
     color: white;
-}
+} */
 
 .fa:hover {
     opacity: 0.7;
@@ -421,7 +423,7 @@ article.post {
 img.imgPostImage {
     width: 60%;
     display: block;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 a.loadmore {
@@ -429,7 +431,7 @@ a.loadmore {
     text-transform: uppercase;
     line-height: 1.75;
     color: #ffffff;
-    border: 1px solid #099cec;
+    border: 1px solid #555;
     letter-spacing: 2px;
     font-size: 10px;
     /* font-family: 'Montserrat'; */
@@ -437,10 +439,11 @@ a.loadmore {
     display: inline-block;
     text-align: center;
     padding: 0px 15px 0px 12px;
-    background-color: #099cec;
+    background-color: #555;
     font-weight: bold;
     font-size: 14px;
     text-decoration: none;
+    border-radius: 4px;
 }
 
 .side-item {
@@ -490,7 +493,7 @@ h2.headertext span {
     color: #333;
     line-height: 27px;
     padding: 2px 18px;
-    border: 2px dashed #ccc;
+    border: 1px dashed #ccc;
     display: inline-block;
     margin: 0px 0px 6px 0px;
     background: #ffffff;
@@ -503,6 +506,7 @@ h2.headertext {
     text-align: center;
     /* font-family: "Open Sans", sans-serif; */
     font-weight: normal;
+    margin: 0px 0px 0px 0px;
 }
 
 .headertext:before {
@@ -510,7 +514,7 @@ h2.headertext {
     width: 100%;
     height: 1px;
     top: 49%;
-    border-bottom: 2px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
     position: absolute;
     left: 0;
 }
@@ -526,7 +530,7 @@ h2.headertext {
 }
 
 .blog-panel {
-    padding: 5px 5px 5px 5px;
+    padding: 0px 25px 0px 25px;
     width: 100%;
     background: #fff;
     margin-bottom: 20px;
@@ -613,11 +617,11 @@ a.citaUser {
 }
 
 h4.nextLink {
-    color: #099cec;
+    color: #555;
 }
 
 h4.previousLink {
-    color: #099cec;
+    color: #555;
 }
 
 cite.user {
@@ -629,4 +633,80 @@ cite.user {
 
 span.datetime.secondary-text {
     margin-left: 55%;
+}
+
+.blog-panel h2 {
+    text-align: center;
+}
+
+.site-social-networks li {
+    text-align: center;
+    width: 32.2222%;
+    background-color: #F7F7F7;
+    margin-bottom: 3px!important;
+    padding-bottom: 7px;
+    display: inline-block;
+    padding: 0;
+}
+
+.site-social-networks a {
+    margin: 20px auto 0 auto;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.site-social-networks i.fa {
+    width: 32px;
+    height: 32px;
+    margin: 10px auto 0;
+    line-height: 32px;
+    text-align: center;
+    font-size: 20px;
+    color: #444;
+    display: block;
+    padding: 4px 0px 0px 0px;
+}
+
+ul.site-social-networks.secondary-2-primary.style-default.show-title {
+    padding: 0px;
+}
+
+.widget-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.viewBlogCart-first {
+    margin: 0px 0px 15px 0px;
+}
+
+.viewBlogCart {
+    margin: 20px 0px 20px 0px;
+}
+
+.categories span.label-size {
+    display: inline-block;
+    float: left;
+    font-size: 11px;
+    line-height: normal;
+    margin: 0 5px 5px 0;
+    opacity: 1;
+}
+
+.categories a.categoryLabel {
+    background: #f7f7f7;
+    color: #333;
+    float: left;
+    border: 1px solid #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 100%;
+    margin: 0;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    transition: all .6s;
+    text-decoration: none;
+}
+
+div.clear {
+    clear: both;
 }

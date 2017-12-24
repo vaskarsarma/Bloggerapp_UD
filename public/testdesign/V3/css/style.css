@@ -80,10 +80,11 @@ body {
     border: 0px;
 }
 
-.btn-subscribe:hover {
+
+/* .btn-subscribe:hover {
     color: #7b3d06;
     border: 0px;
-}
+} */
 
 .btn-subscribe:focus {
     /* background-image: url("../images/subscribe-bg.jpg"); */

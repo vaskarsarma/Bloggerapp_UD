@@ -195,10 +195,10 @@ export default StyleSheet.create({
     'border': [{ 'unit': 'px', 'value': 0 }],
     'borderRadius': '4px'
   },
-  'btn-subscribe:hover': {
-    'color': '#7b3d06',
-    'border': [{ 'unit': 'px', 'value': 0 }]
-  },
+  // .btn-subscribe:hover {
+    color: #7b3d06;
+    border: 0px;
+}
   'btn-subscribe:focus': {
     // background-image: url("../images/subscribe-bg.jpg");
     'backgroundPosition': 'top center',
