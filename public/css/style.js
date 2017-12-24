@@ -42,7 +42,7 @@ export default StyleSheet.create({
     'fontSize': [{ 'unit': 'px', 'value': 30 }]
   },
   'navbar': {
-    'margin': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 0 }],
+    // margin: 10px 0 5px 0;
     'backgroundColor': 'transparent',
     'border': [{ 'unit': 'px', 'value': 0 }]
   },

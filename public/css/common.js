@@ -131,7 +131,7 @@ export default StyleSheet.create({
     'fontSize': [{ 'unit': 'px', 'value': 20 }],
     'cursor': 'pointer'
   },
-  'div#divImage': {
+  'divdivLoadMore': {
     'textAlign': 'center'
   },
   'col-lg-4divUserBlogs': {
@@ -422,7 +422,7 @@ export default StyleSheet.create({
     'display': 'block',
     'margin': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 5 }, { 'unit': 'string', 'value': 'auto' }]
   },
-  'aloadmore': {
+  'spanloadmore': {
     'borderRadius': '1px',
     'textTransform': 'uppercase',
     'lineHeight': [{ 'unit': 'px', 'value': 1.75 }],
@@ -439,7 +439,8 @@ export default StyleSheet.create({
     'fontWeight': 'bold',
     'fontSize': [{ 'unit': 'px', 'value': 14 }],
     'textDecoration': 'none',
-    'borderRadius': '4px'
+    'borderRadius': '4px',
+    'cursor': 'pointer'
   },
   'side-item': {
     'overflow': 'hidden',

@@ -1,6 +1,7 @@
 <div class="row">
     <div class="my-container ankit">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 my-column blogdata">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 my-column">
+            <div class="blogdata">
             {{#each blogs.result}}
             <article class="post">
                 <div class="post-header">
@@ -39,9 +40,12 @@
                 </div>
             </article>
            {{/each}}
+           </div>
+           <div>
             <div id="divImage" class="divLoadMore" data-cid="{{blogCID}}" data-lastblogid="{{lastblogid}}">
                 {{!-- <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span> --}}
-                <a class="loadmore" href="#">load more</a>
+                <span class="loadmore" >load more</span>
+            </div>
             </div>
         </div>         
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 my-column">
