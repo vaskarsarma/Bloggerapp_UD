@@ -31,7 +31,7 @@ exports.blogsbyuserid = function(userid, lastblogid) {
     //console.log("111");
     return new Promise(function(resolve, reject) {
         axios.get(path).then(function(response) {
-                //console.log("2");
+                //console.log("12");
                 log.logger.info("Model layer blogsbyuserid : service call : success");
                 resolve(response);
             })
@@ -285,7 +285,7 @@ exports.blogsnamebyuserid = function(userid) {
     //console.log("111");
     return new Promise(function(resolve, reject) {
         axios.get(path).then(function(response) {
-                //console.log("2");
+                //console.log("1112");
                 log.logger.info("Model layer blogsnamebyuserid : service call : success");
                 resolve(response);
             })

@@ -53,6 +53,8 @@ router.post('/profile', function(req, res) {
     var lcid = req.body.lastblogid;
     var userid = req.body.userid;
 
+    console.log("1");
+
     if (userid == req.session.user._id) {
         Promise.all([
             blogger.blogsbyuserid(userid, lcid),
@@ -61,7 +63,9 @@ router.post('/profile', function(req, res) {
             blogs = data[0].data;
             blogslist = data[1].data;
 
-            console.log(JSON.stringify(blogslist));
+            console.log("2");
+
+            //console.log(JSON.stringify(blogslist));
 
             log.logger.info("Blogger Page : retrieve blogs : blogs count " + blogs.count);
 
@@ -80,8 +84,8 @@ router.post('/profile', function(req, res) {
             res.json(data);
         }).catch(function(err) {
             blogs = { "result": [], "count": 0 };
-            blogslist={ "result": [], "count": 0 };
-            data = { "category": categoryList, "blogs": blogs, "lastblogid": lcid,"blogslist": blogslist.result };
+            blogslist = { "result": [], "count": 0 };
+            data = { "category": categoryList, "blogs": blogs, "lastblogid": lcid, "blogslist": blogslist.result };
             res.json(data);
         });
     } else {
@@ -142,7 +146,7 @@ router.post("/savedata/edit", function(req, res) {
         var content = req.body.content;
         var category = req.body.category;
         var prevblogid = req.body.prevblogid;
-        var nextblogid = req.body.nextblogid;        
+        var nextblogid = req.body.nextblogid;
         var userid = req.body.userid;
         var createdby = req.body.createdby;
 
@@ -155,7 +159,7 @@ router.post("/savedata/edit", function(req, res) {
                 "content": content,
                 "categorykey": category,
                 "prevblogid": prevblogid,
-                "nextblogid": nextblogid,                
+                "nextblogid": nextblogid,
                 "userid": userid
             }
 

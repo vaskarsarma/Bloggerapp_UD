@@ -101,6 +101,7 @@ $(function() {
 
     /* Code to add new blog */
     $("#addeditblogfrm").submit(function(e) {
+        debugger;
         e.preventDefault();
 
         var isValid = true;
@@ -116,7 +117,7 @@ $(function() {
         var actiontype = $("#actiontype").val();
         var topic = $("#topic").val();
         //var content = CKEDITOR.instances['content'].getData();
-        var content = $("#content").summernote('code');
+        var content = $("#content").html(); //$("#content").summernote('code');
         var prevblogid = $("#prevblogid").val();
         var nextblogid = $("#nextblogid").val();
         var category = $("#category").val();
@@ -215,7 +216,7 @@ $(function() {
         var actiontype = $("#actiontype_" + _id).val();
         var topic = $("#topic_" + _id).val();
         //var content = CKEDITOR.instances['content_' + _id].getData();
-        var content = $('#content_' + _id).summernote('code');
+        var content = $('#content_' + _id).html(); // $('#content_' + _id).summernote('code');
         var prevblogid = $("#prevblogid_" + _id).val();
         var nextblogid = $("#nextblogid_" + _id).val();
         var category = $("#category_" + _id).val();
