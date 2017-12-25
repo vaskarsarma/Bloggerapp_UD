@@ -4,10 +4,10 @@
             {{#if blog}}
             <div class="blog-panel">
                 <h2>Blog heading : {{{blog.topic}}}</h2>
-                <h5>By {{#Compare user._id "==" blog.userid}}
+                {{!-- <h5>By {{#Compare user._id "==" blog.userid}}
                     <a href="/myprofile/{{blog.userid}}">{{blog.createdby}}</a>
                     {{else}} {{blog.createdby}} {{/Compare}} | {{#CovertISODate blog.creationdate}}{{/CovertISODate}}
-                </h5>
+                </h5> --}}
                 <span>{{{blog.content}}}</span>
             </div>
 
@@ -109,8 +109,12 @@
                 {{/each}} {{/Compare}}{{/if}}
             </div>
 
-            <div id="divCommentImage" data-blogid="{{blog._id}}" data-lastcommentid="{{lastCommentId}}">
+            {{!-- <div id="divCommentImage" data-blogid="{{blog._id}}" data-lastcommentid="{{lastCommentId}}">
                 <span id="loadmorecommentbyblogid" name="loadmorecommentbyblogid" alt="Load More" class="glyphicon glyphicon-hand-down"></span>
+            </div> --}}
+            <div id="divCommentImage" class="divLoadMore" data-blogid="{{blog._id}}" data-lastcommentid="{{lastCommentId}}">
+                {{!-- <span id="loadmoreblog" name="loadmoreblog" alt="Load More" class="glyphicon glyphicon-hand-down"></span> --}}
+                <span class="loadmore">load more</span>
             </div>
             {{/if}}
         </div>
