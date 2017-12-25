@@ -12,7 +12,7 @@ app.locals.config = config.get('app.restAPIEndpoint.v1ContractPath');
 console.log(app.locals.config);
 
 app.use(bodyparser.urlencoded({ extended: true }));
-app.use(bodyparser.json());
+app.use(bodyparser.json({ limit: '5mb' }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'profilephoto')));
@@ -26,7 +26,7 @@ var hbs = exphbs.create({
         ValidateBlogs: require("./public/js/helper/validateBlogs"),
         CovertISODate: require("./public/js/helper/convertisodate"),
         CreateDropDown: require("./public/js/helper/createdropdown"),
-        ShowDate: require("./public/js/helper/converttolocaldate")        
+        ShowDate: require("./public/js/helper/converttolocaldate")
     },
     partialsDir: ['views/partials/']
 });
@@ -128,7 +128,7 @@ app.get('/', authNotRequired, function(req, res) {
     var blogs = {};
     var blog = require("./modellayer/blogs");
     var categoryList = blog.category;
- 
+
     res.render('home', {
         layout: 'default',
         title: 'Home Page',
@@ -137,7 +137,7 @@ app.get('/', authNotRequired, function(req, res) {
 });
 
 app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
-  
+
     var blogs = {};
     var blog = require("./modellayer/blogs");
     var blogCategory = req.params.blogCategory;
@@ -157,7 +157,7 @@ app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
             layout: 'default',
             title: 'Blog List',
             blogs: blogs,
-            blogCID:blogCategory,
+            blogCID: blogCategory,
             lastblogid: lastblogid,
             categorylist: categoryList
         });
@@ -168,7 +168,7 @@ app.get('/listblog/:blogCategory', authNotRequired, function(req, res) {
             layout: 'default',
             title: 'Blog List',
             blogs: blogs,
-            blogCID:blogCategory,
+            blogCID: blogCategory,
             lastblogid: "0",
             categorylist: categoryList
         });

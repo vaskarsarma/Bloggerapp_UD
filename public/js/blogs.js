@@ -162,14 +162,13 @@ $(function() {
             run_waitMe("addeditblogfrm");
             $(".blogsuccesserrorpanel").html("");
 
-            //console.log(JSON.stringify(data));
-
             $.ajax({
                 url: "/blogs/savedata/add",
                 data: data,
                 method: "POST",
-                //contentType: 'multipart/form-data',
                 success: function(data) {
+                    console.log("data object size :" + data.content.length);
+
                     msgPanel.append(
                         SuccessMessage("<strong>Thank You!</strong> New Blog is added.")
                     );
@@ -185,7 +184,7 @@ $(function() {
 
                     stop_waitMe("addeditblogfrm");
                 },
-                error: function(error) {
+                error: function(xhr, textStatus, error) {
                     console.log("error : " + error);
                     msgPanel.append(
                         ErrorMessage("<strong>Warning!</strong> error.")

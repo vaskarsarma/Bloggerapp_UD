@@ -111,3 +111,10 @@ ul.side-newsfeed {
     position: absolute;
     left: 0;
 } */
+
+div .blogcontent {
+    margin: 6px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

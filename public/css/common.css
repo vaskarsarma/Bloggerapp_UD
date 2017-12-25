@@ -217,6 +217,10 @@ label.col-lg-2.control-label {
 }
 
 a.dropdown-toggle {
+    margin: 0px 0px 0px 0px;
+}
+
+a.menubar_dropdown {
     margin: -6px 0px 0px 0px;
 }
 

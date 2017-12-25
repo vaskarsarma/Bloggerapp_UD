@@ -72,7 +72,7 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
                   {{#Compare ./user.authType "!==" "local" }}
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <a class="dropdown-toggle menubar_dropdown" data-toggle="dropdown" href="#" aria-expanded="false">
                       <img src="{{user.userImage}}" 
                         class="profile-image navbarimage four reloadimage"> {{user.username}} <span class="caret"></span>
                       </a>
@@ -80,7 +80,7 @@
                       <li><a class="dropdown-item" href="/auth/logout">Log-out {{user.username}}</a></li>
                     </ul>
                     {{else}}
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <a class="dropdown-toggle menubar_dropdown" data-toggle="dropdown" href="#" aria-expanded="false">
                       <img src="/{{user._id}}/{{user._id}}.jpg" 
                         class="profile-image navbarimage four reloadimage"> {{user.username}} <span class="caret"></span>
                       </a>
