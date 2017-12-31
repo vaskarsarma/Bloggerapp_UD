@@ -167,8 +167,6 @@ $(function() {
                 data: data,
                 method: "POST",
                 success: function(data) {
-                    console.log("data object size :" + data.content.length);
-
                     msgPanel.append(
                         SuccessMessage("<strong>Thank You!</strong> New Blog is added.")
                     );
