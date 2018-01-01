@@ -4,14 +4,11 @@ module.exports = router;
 var log = require("../modellayer/log");
 var _ = require("lodash");
 var blogger = require('../modellayer/blogs');
-
-//var categoryList = blogger.category;
+var categoryList = blogger.category;
 
 //Get Blog details
 router.get('/showdetails/:blogid', function(req, res) {
     var blogid = req.params.blogid;
-
-    //console.log("blog : " + blogid);
 
     var collectionCountList = {};
 
@@ -43,7 +40,8 @@ router.get('/showdetails/:blogid', function(req, res) {
             comments: comments,
             mostrecentblogs: mostrecentblogs,
             topvisit: topvisit,
-            lastCommentId: lastCommentId
+            lastCommentId: lastCommentId,
+            category: categoryList
         });
 
     }).catch(function(err) {

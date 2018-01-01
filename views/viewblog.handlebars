@@ -129,13 +129,13 @@
                         <p>
                             <img class="img-responsive imgPostImage" max-width="300" src="/{{blog.userid}}/{{blog.userid}}.jpg" >
                         </p>
-                        <p>I'm <strong>{{blog.createdby}}</strong></p>
+                        <p>I'm <strong>{{blog.createdby}}</strong> {{{blog.aboutauthor}}}</p>
                     </div>
                 </div>       
               <div class="clear"></div>
             </div>
 
-            <div class="social-networks viewBlogCart" >
+            <div class="social-networks viewBlogCart hidden" >
                 <h2 class="headertext">
                     <span>Follow Us</span>
                 </h2>
@@ -175,45 +175,11 @@
                     <span>CATEGORIES</span>
                 </h2>
                 <div class="widget-content cloud-label-widget-content">
+                    {{#each category}}
                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">Node.js</a>
+                        <a class="categoryLabel" data-key="{{this.key}}" href="/listblog/{{this.key}}">{{this.name}}</a>
                     </span>
-                     <span class="label-size">
-                        <a class="categoryLabel" href="#">Angular.js</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Couchbase</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Docker</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Jenkins</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Jquery</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Mongodb</a>
-                    </span>
-                    <span class="label-size ">
-                        <a class="categoryLabel" href="#">Reactjs</a>
-                    </span>     
-                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">Openshift</a>
-                    </span>    
-                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">Php</a>
-                    </span>    
-                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">React-Native</a>
-                    </span>
-                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">Visual-Studio</a>
-                    </span>  
-                     <span class="label-size ">
-                        <a class="categoryLabel" href="#">Vue.js</a>
-                    </span>                    
+                    {{/each}}
                 </div>
                 <div class="clear"></div>
             </div>
