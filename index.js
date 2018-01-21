@@ -11,8 +11,11 @@ var flash = require('connect-flash');
 app.locals.config = config.get('app.restAPIEndpoint.v1ContractPath');
 console.log(app.locals.config);
 
-app.use(bodyparser.urlencoded({ extended: true }));
-app.use(bodyparser.json({ limit: '5mb' }));
+// parse application/json
+app.use(bodyparser.json({limit: '50mb'}));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyparser.urlencoded({limit: '50mb', extended: true}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'profilephoto')));

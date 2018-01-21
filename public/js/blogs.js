@@ -165,6 +165,7 @@ $(function() {
             $.ajax({
                 url: "/blogs/savedata/add",
                 data: data,
+                dataType: 'json',
                 method: "POST",
                 success: function(data) {
                     msgPanel.append(
