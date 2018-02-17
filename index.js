@@ -215,6 +215,14 @@ app.use('/verifyemail', authNotRequired, verifyemail);
 var contactus = require('./controllers/contactus');
 app.use('/contactus', authNotRequired, contactus);
 
+app.get('/aboutus', authNotRequired, function(req, res) {
+   
+    res.render('aboutus', {
+        layout: 'default',
+        title: 'About me'
+    });
+});
+
 // var aboutus = require('./controllers/aboutus');
 // app.use('/aboutus', authNotRequired, aboutus);
 

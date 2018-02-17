@@ -715,3 +715,9 @@ ul.site-social-networks.secondary-2-primary.style-default.show-title {
 div.clear {
     clear: both;
 }
+
+img.imgAboutImage {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+}
