@@ -66,8 +66,8 @@
                   <a href="/contactus">Contact Us</a>
                 </li>
                 {{#if user}}    
-                  <li><a href="/auth/dashboard">Dashboard</a></li>
-                  <li><a href="/blogs/profile/{{user._id}}">Blogs</a></li>{{/if}}
+                 {{#IsAdmin ./user.admin}}{{/IsAdmin}} 
+                 <li><a href="/blogs/profile/{{user._id}}">Blogs</a></li>{{/if}}
                 {{#if user}}
                 <li>
                 <ul class="nav navbar-nav navbar-right">

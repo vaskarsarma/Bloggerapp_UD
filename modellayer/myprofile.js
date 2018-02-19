@@ -156,7 +156,7 @@ router.get('/:_id', function(req, res) {
     // console.log("_id " + userid);
     var collectionCountList = {};
 
-    console.log("req.user" + JSON.stringify(req.user));
+    console.log("my profile req.session.user " + JSON.stringify(req.session.user));
     if (userid == req.session.user._id && req.session.user.authType == "local") {
         var mappingObj = {
             "page": "profile",

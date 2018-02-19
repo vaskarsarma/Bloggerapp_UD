@@ -5,6 +5,10 @@ module.exports = router;
 
 router.get("/dashboard/:id?", function(req, res) {
     //http://localhost:2000/auth/dashboard/595cde84f8ce4a2250f38820
+
+    if(req.session.user != null && req.session.user.admin != null && JSON.stringify(req.session.user.admin) !='true')
+        res.status(500).send();
+
     var id = req.params.id != null ? req.params.id.toLowerCase() : "testde84f8ce4a2250f38820";
     console.log("id:" + id);
     dashbordModel.GetAllUserCount(id).then(data => {
