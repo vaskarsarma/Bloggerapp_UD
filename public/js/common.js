@@ -1,5 +1,10 @@
 'use strict';
 $(function() {
+    // make all image responsive
+    $("img").addClass("img-responsive");
+
+    // remove this  class to fix design issues
+    $('.blogCategory-box .imgcontainer img').removeClass("img-responsive");
 
     console.log($("#hdnErrorMsg").val());
     if ($("#hdnErrorMsg").val())
