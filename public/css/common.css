@@ -721,3 +721,7 @@ img.imgAboutImage {
     display: block;
     margin: 5px auto;
 }
+
+a {
+    color: blue;
+}

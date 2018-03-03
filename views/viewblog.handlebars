@@ -2,8 +2,32 @@
     <div class="my-container">
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             {{#if blog}}
+
+            <div class="blog-pager" id="blog-pager">
+                {{#Compare blog.prevblogid "!==" "0"}}
+                <span id="blog-pager-newer-link">
+                    <a class="blog-pager-newer-link" href="/viewblog/showdetails/{{blog.prevblogid}}" id="Blog1_blog-pager-newer-link" title="Newer Post">
+                        <h4 class="previousLink">
+                            <b>← Previous Story</b>
+                        </h4>
+                        <h3></h3>
+                        <h3></h3>
+                    </a>
+                </span>
+                {{/Compare}} {{#Compare blog.nextblogid "!==" "0"}}
+                <span id="blog-pager-older-link">
+                    <a class="blog-pager-older-link" href="/viewblog/showdetails/{{blog.nextblogid}}" id="Blog1_blog-pager-older-link" title="Older Post">
+                        <h4 class="nextLink">
+                            <b>Next Story →</b>
+                        </h4>
+                        <h3></h3>
+                    </a>
+                </span>
+                {{/Compare}}
+            </div>
+
             <div class="blog-panel">
-                <h2>Blog heading : {{{blog.topic}}}</h2>
+                <h2>{{{blog.topic}}}</h2>
                 {{!-- <h5>By {{#Compare user._id "==" blog.userid}}
                     <a href="/myprofile/{{blog.userid}}">{{blog.createdby}}</a>
                     {{else}} {{blog.createdby}} {{/Compare}} | {{#CovertISODate blog.creationdate}}{{/CovertISODate}}
@@ -33,12 +57,7 @@
                 </span>
                 {{/Compare}}
             </div>
-            {{!-- {{#Compare blog.prevblogid "!==" "0"}}
-            <a href="/viewblog/showdetails/{{blog.prevblogid}}">Previous</a>
-            {{/Compare}} {{#Compare blog.nextblogid "!==" "0"}}
-            <a href="/viewblog/showdetails/{{blog.nextblogid}}">Next</a>
-            {{/Compare}} --}}
-
+            
             <hr>
             <!-- Blog Comments - Comments Form -->
             <div class="panel panel-default">
