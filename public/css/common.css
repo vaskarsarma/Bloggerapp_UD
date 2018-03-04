@@ -241,6 +241,11 @@ a.signinlink:hover {
     color: #ff6000;
 }
 
+a.signuplink:focus,
+a.signuplink:hover {
+    color: #ff6000;
+}
+
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,

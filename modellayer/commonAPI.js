@@ -109,7 +109,6 @@ router.get('/subscribe', function(req, res) {
                 };
 
                 var htmlToSend = template(replacements);
-                console.log(htmlToSend);
 
                 var mailOptions = {
                     from: uid,
@@ -126,9 +125,9 @@ router.get('/subscribe', function(req, res) {
                     }
                 });
 
-                transporter.sendMail(mailOptions, function(error, response) {
+               transporter.sendMail(mailOptions, function(error, response) {
                     if (error) {
-                        console.log("error");
+                        console.log("transporter.sendMail error");
                         res.json(false);
                     } else {
                         console.log("success");
