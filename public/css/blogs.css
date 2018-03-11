@@ -18,12 +18,11 @@ span.glyphicon.glyphicon-remove {
 
 span#loadmoreblogbyuserid {
     margin-top: 15px;
-    font-size: 20px;
     cursor: pointer;
 }
 
 div#divImage {
-    text-align: left;
+    text-align: center;
 }
 
 span.glyphicon.glyphicon-plus-sign {
